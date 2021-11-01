@@ -1,0 +1,18 @@
+include MANIFEST.in
+include requirements.txt
+include *.json
+include *.md
+include *.py
+include *.txt
+recursive-include spoelkeuken *.css
+recursive-include spoelkeuken *.csv
+recursive-include spoelkeuken *.html
+recursive-include spoelkeuken *.ico
+recursive-include spoelkeuken *.js
+recursive-include spoelkeuken *.json
+recursive-include spoelkeuken *.md
+recursive-include spoelkeuken *.png
+recursive-include spoelkeuken *.py
+recursive-include spoelkeuken *.svg
+recursive-include spoelkeuken *.txt
+recursive-exclude spoelkeuken *.pyc
