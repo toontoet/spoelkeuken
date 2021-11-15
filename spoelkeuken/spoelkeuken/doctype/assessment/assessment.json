@@ -1,7 +1,7 @@
 {
  "actions": [],
  "allow_rename": 1,
- "autoname": "[series]",
+ "autoname": "format:SPK{######}",
  "creation": "2021-11-01 20:04:59.805387",
  "doctype": "DocType",
  "editable_grid": 1,
@@ -45,7 +45,7 @@
    "link_fieldname": "assessment"
   }
  ],
- "modified": "2021-11-01 20:38:04.841114",
+ "modified": "2021-11-12 14:27:43.292025",
  "modified_by": "Administrator",
  "module": "Spoelkeuken",
  "name": "Assessment",
