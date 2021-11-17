@@ -8,6 +8,8 @@
  "engine": "InnoDB",
  "field_order": [
   "tool",
+  "tool_name",
+  "tool_usage",
   "assessment",
   "score",
   "amended_from",
@@ -252,12 +254,22 @@
    "fieldtype": "Float",
    "in_preview": 1,
    "label": "Score Gebruikergericht"
+  },
+  {
+   "fieldname": "tool_name",
+   "fieldtype": "Data",
+   "label": "Naam"
+  },
+  {
+   "fieldname": "tool_usage",
+   "fieldtype": "Long Text",
+   "label": "Beschijf waarvoor de tool in uw organisatie gebruikt wordt"
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2021-11-12 13:28:11.724857",
+ "modified": "2021-11-17 15:20:41.388680",
  "modified_by": "Administrator",
  "module": "Spoelkeuken",
  "name": "AssessmentTool",
@@ -272,6 +284,18 @@
    "read": 1,
    "report": 1,
    "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Spoelkeuken Manager",
    "share": 1,
    "write": 1
   }
