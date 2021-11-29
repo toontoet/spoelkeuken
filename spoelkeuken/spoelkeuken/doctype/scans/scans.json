@@ -9,8 +9,9 @@
  "field_order": [
   "organisation",
   "date",
-  "status",
-  "doc_inventory"
+  "title",
+  "descrioption",
+  "inventory"
  ],
  "fields": [
   {
@@ -30,31 +31,35 @@
    "label": "Date"
   },
   {
-   "default": "draft",
-   "fieldname": "status",
-   "fieldtype": "Select",
-   "in_list_view": 1,
-   "in_preview": 1,
-   "label": "Status",
-   "options": "draft\nreview\npublished\nwithdrawn"
+   "fieldname": "title",
+   "fieldtype": "Data",
+   "label": "Geef deze scan een naam",
+   "reqd": 1
   },
   {
-   "fieldname": "doc_inventory",
-   "fieldtype": "Attach",
-   "label": "Inventarisatie Sheet"
+   "fieldname": "descrioption",
+   "fieldtype": "Long Text",
+   "label": "Beschrijf waar je je op wilt richten met deze scan",
+   "reqd": 1
+  },
+  {
+   "description": "Maak een lijst van alle tools die je in deze scan wilt onderzoeken. Zet iedere tool op een nieuwe regel. Je kunt zoveel tools toetsen als je wilt. Het is ook mogelijk om later nog extra tools toe te voegen.",
+   "fieldname": "inventory",
+   "fieldtype": "Long Text",
+   "label": "Inventarisatie"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [
   {
-   "link_doctype": "AssessmentTool",
-   "link_fieldname": "assessment"
+   "link_doctype": "ToolToets",
+   "link_fieldname": "scan"
   }
  ],
- "modified": "2021-11-17 15:45:04.838588",
+ "modified": "2021-11-29 16:33:38.648822",
  "modified_by": "Administrator",
  "module": "Spoelkeuken",
- "name": "Assessment",
+ "name": "Scans",
  "owner": "Administrator",
  "permissions": [
   {
@@ -80,6 +85,16 @@
    "role": "Spoelkeuken Manager",
    "share": 1,
    "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Spoelkeuken Deelnemer",
+   "select": 1,
+   "share": 1
   }
  ],
  "sort_field": "modified",

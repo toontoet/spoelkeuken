@@ -4,5 +4,5 @@
 # import frappe
 import unittest
 
-class TestAssessment(unittest.TestCase):
+class TestToolToets(unittest.TestCase):
 	pass

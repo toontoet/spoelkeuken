@@ -4,5 +4,5 @@
 # import frappe
 import unittest
 
-class TestAssessmentTool(unittest.TestCase):
+class TestScans(unittest.TestCase):
 	pass

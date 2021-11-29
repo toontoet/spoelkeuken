@@ -34,14 +34,14 @@
   {
    "hidden": 0,
    "is_query_report": 0,
-   "label": "Assessment",
-   "link_to": "Assessment",
+   "label": "Scans",
+   "link_to": "Scans",
    "link_type": "DocType",
    "onboard": 0,
    "type": "Link"
   }
  ],
- "modified": "2021-11-01 20:05:28.079124",
+ "modified": "2021-11-25 16:46:19.733761",
  "modified_by": "Administrator",
  "module": "Spoelkeuken",
  "name": "Spoelkeuken",

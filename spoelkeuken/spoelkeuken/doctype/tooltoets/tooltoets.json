@@ -1,7 +1,6 @@
 {
  "actions": [],
  "allow_rename": 1,
- "autoname": "[SPK.#####]",
  "creation": "2021-11-01 20:24:00.002981",
  "doctype": "DocType",
  "editable_grid": 1,
@@ -10,39 +9,64 @@
   "tool",
   "tool_name",
   "tool_usage",
-  "assessment",
-  "score",
+  "scan",
   "amended_from",
   "q_open_1",
+  "q_open_1_note",
   "q_open_2",
+  "q_open_2_note",
   "q_open_3",
+  "q_open_3_note",
   "q_transparent_1",
+  "q_transparent_1_note",
   "q_transparent_2",
+  "q_transparent_2_note",
   "q_transparent_3",
+  "q_transparent_3_note",
   "q_transparent_4",
+  "q_transparent_4_note",
   "q_transparent_5",
+  "q_transparent_5_note",
   "q_transparent_6",
+  "q_transparent_6_note",
   "q_accountable_1",
+  "q_accountable_1_note",
   "q_accountable_2",
+  "q_accountable_2_note",
   "q_accountable_3",
+  "q_accountable_3_note",
   "q_accountable_4",
+  "q_accountable_4_note",
   "q_accountable_5",
+  "q_accountable_5_note",
   "q_accountable_6",
+  "q_accountable_6_note",
   "q_souvereign_1",
+  "q_souvereign_1_note",
   "q_souvereign_2",
+  "q_souvereign_2_note",
   "q_souvereign_3",
+  "q_souvereign_3_note",
   "q_souvereign_4",
+  "q_souvereign_4_note",
   "q_souvereign_5",
+  "q_souvereign_5_note",
   "q_usercentric_1",
+  "q_usercentric_1_note",
   "q_usercentric_2",
+  "q_usercentric_2_note",
   "q_usercentric_3",
+  "q_usercentric_3_note",
   "q_usercentric_4",
+  "q_usercentric_4_note",
   "q_usercentric_5",
+  "q_usercentric_5_note",
   "score_open",
   "score_transparent",
   "score_accountable",
   "score_souvereign",
-  "score_usercentric"
+  "score_usercentric",
+  "score"
  ],
  "fields": [
   {
@@ -56,22 +80,21 @@
    "search_index": 1
   },
   {
-   "fieldname": "assessment",
-   "fieldtype": "Link",
-   "label": "Assessment",
-   "options": "Assessment"
+   "fieldname": "tool_name",
+   "fieldtype": "Data",
+   "label": "Naam"
   },
   {
-   "fieldname": "score",
-   "fieldtype": "Rating",
-   "label": "Score"
+   "fieldname": "tool_usage",
+   "fieldtype": "Long Text",
+   "label": "Beschijf waarvoor de tool in uw organisatie gebruikt wordt"
   },
   {
    "fieldname": "amended_from",
    "fieldtype": "Link",
    "label": "Amended From",
    "no_copy": 1,
-   "options": "AssessmentTool",
+   "options": "ToolToets",
    "print_hide": 1,
    "read_only": 1
   },
@@ -82,10 +105,20 @@
    "options": "n/a\nyes\nno"
   },
   {
+   "fieldname": "q_open_1_note",
+   "fieldtype": "Long Text",
+   "label": "Toelichting"
+  },
+  {
    "fieldname": "q_open_2",
    "fieldtype": "Select",
    "label": "Kan de broncode worden hergebruikt in andere nieuwe software?",
    "options": "n/a\nyes\nno"
+  },
+  {
+   "fieldname": "q_open_2_note",
+   "fieldtype": "Long Text",
+   "label": "Toelichting"
   },
   {
    "fieldname": "q_open_3",
@@ -94,10 +127,20 @@
    "options": "n/a\nyes\nno"
   },
   {
+   "fieldname": "q_open_3_note",
+   "fieldtype": "Long Text",
+   "label": "Toelichting"
+  },
+  {
    "fieldname": "q_transparent_1",
    "fieldtype": "Select",
    "label": "Opereert het software-ecosysteem onafhankelijk van enige overheid, commerci\u00eble of bepaalde politieke invloed?",
    "options": "n/a\nyes\nno"
+  },
+  {
+   "fieldname": "q_transparent_1_note",
+   "fieldtype": "Long Text",
+   "label": "Toelichting"
   },
   {
    "fieldname": "q_transparent_2",
@@ -106,10 +149,20 @@
    "options": "n/a\nyes\nno"
   },
   {
+   "fieldname": "q_transparent_2_note",
+   "fieldtype": "Long Text",
+   "label": "Toelichting"
+  },
+  {
    "fieldname": "q_transparent_3",
    "fieldtype": "Select",
    "label": "Wordt er gecommuniceerd waar de opgeslagen gegevens voor gebruikt worden?",
    "options": "n/a\nyes\nno"
+  },
+  {
+   "fieldname": "q_transparent_3_note",
+   "fieldtype": "Long Text",
+   "label": "Toelichting"
   },
   {
    "fieldname": "q_transparent_4",
@@ -118,10 +171,20 @@
    "options": "n/a\nyes\nno"
   },
   {
+   "fieldname": "q_transparent_4_note",
+   "fieldtype": "Long Text",
+   "label": "Toelichting"
+  },
+  {
    "fieldname": "q_transparent_5",
    "fieldtype": "Select",
    "label": "Zijn de voorwaarden en procedures in begrijpelijke taal opgesteld?",
    "options": "n/a\nyes\nno"
+  },
+  {
+   "fieldname": "q_transparent_5_note",
+   "fieldtype": "Long Text",
+   "label": "Toelichting"
   },
   {
    "fieldname": "q_transparent_6",
@@ -130,10 +193,20 @@
    "options": "n/a\nyes\nno"
   },
   {
+   "fieldname": "q_transparent_6_note",
+   "fieldtype": "Long Text",
+   "label": "Toelichting"
+  },
+  {
    "fieldname": "q_accountable_1",
    "fieldtype": "Select",
    "label": "Zijn gebruikers op authenticiteit gecontroleerd?",
    "options": "n/a\nyes\nno"
+  },
+  {
+   "fieldname": "q_accountable_1_note",
+   "fieldtype": "Long Text",
+   "label": "Toelichting"
   },
   {
    "fieldname": "q_accountable_2",
@@ -142,10 +215,20 @@
    "options": "n/a\nyes\nno"
   },
   {
+   "fieldname": "q_accountable_2_note",
+   "fieldtype": "Long Text",
+   "label": "Toelichting"
+  },
+  {
    "fieldname": "q_accountable_3",
    "fieldtype": "Select",
    "label": "Distributieketen en bewerkingen op de content worden bijgehouden en kunnen worden achterhaald?",
    "options": "n/a\nyes\nno"
+  },
+  {
+   "fieldname": "q_accountable_3_note",
+   "fieldtype": "Long Text",
+   "label": "Toelichting"
   },
   {
    "fieldname": "q_accountable_4",
@@ -154,10 +237,20 @@
    "options": "n/a\nyes\nno"
   },
   {
+   "fieldname": "q_accountable_4_note",
+   "fieldtype": "Long Text",
+   "label": "Toelichting"
+  },
+  {
    "fieldname": "q_accountable_5",
    "fieldtype": "Select",
    "label": "De gebruikte software beschermt de gebruikersgegevens van gebruikers zo goed mogelijk?",
    "options": "n/a\nyes\nno"
+  },
+  {
+   "fieldname": "q_accountable_5_note",
+   "fieldtype": "Long Text",
+   "label": "Toelichting"
   },
   {
    "fieldname": "q_accountable_6",
@@ -166,10 +259,20 @@
    "options": "n/a\nyes\nno"
   },
   {
+   "fieldname": "q_accountable_6_note",
+   "fieldtype": "Long Text",
+   "label": "Toelichting"
+  },
+  {
    "fieldname": "q_souvereign_1",
    "fieldtype": "Select",
    "label": "Er is geen advertentiemodel dat gebruik maakt van trackers die bezoekers volgen?",
    "options": "n/a\nyes\nno"
+  },
+  {
+   "fieldname": "q_souvereign_1_note",
+   "fieldtype": "Long Text",
+   "label": "Toelichting"
   },
   {
    "fieldname": "q_souvereign_2",
@@ -178,10 +281,20 @@
    "options": "n/a\nyes\nno"
   },
   {
+   "fieldname": "q_souvereign_2_note",
+   "fieldtype": "Long Text",
+   "label": "Toelichting"
+  },
+  {
    "fieldname": "q_souvereign_3",
    "fieldtype": "Select",
    "label": "Kan een gebruiker er voor kiezen welke data gedeeld wordt zonder belangrijke functionaliteit te missen?",
    "options": "n/a\nyes\nno"
+  },
+  {
+   "fieldname": "q_souvereign_3_note",
+   "fieldtype": "Long Text",
+   "label": "Toelichting"
   },
   {
    "fieldname": "q_souvereign_4",
@@ -190,10 +303,20 @@
    "options": "n/a\nyes\nno"
   },
   {
+   "fieldname": "q_souvereign_4_note",
+   "fieldtype": "Long Text",
+   "label": "Toelichting"
+  },
+  {
    "fieldname": "q_souvereign_5",
    "fieldtype": "Select",
    "label": "Kan gepubliceerde content en gebruikersdata worden verwijderd?",
    "options": "n/a\nyes\nno"
+  },
+  {
+   "fieldname": "q_souvereign_5_note",
+   "fieldtype": "Long Text",
+   "label": "Toelichting"
   },
   {
    "fieldname": "q_usercentric_1",
@@ -202,10 +325,20 @@
    "options": "n/a\nyes\nno"
   },
   {
+   "fieldname": "q_usercentric_1_note",
+   "fieldtype": "Long Text",
+   "label": "Toelichting"
+  },
+  {
    "fieldname": "q_usercentric_2",
    "fieldtype": "Select",
    "label": "Is er sprake van data-minimalisatie?",
    "options": "n/a\nyes\nno"
+  },
+  {
+   "fieldname": "q_usercentric_2_note",
+   "fieldtype": "Long Text",
+   "label": "Toelichting"
   },
   {
    "fieldname": "q_usercentric_3",
@@ -214,10 +347,20 @@
    "options": "n/a\nyes\nno"
   },
   {
+   "fieldname": "q_usercentric_3_note",
+   "fieldtype": "Long Text",
+   "label": "Toelichting"
+  },
+  {
    "fieldname": "q_usercentric_4",
    "fieldtype": "Select",
    "label": "Is de software ingericht volgens privacy by default?",
    "options": "n/a\nyes\nno"
+  },
+  {
+   "fieldname": "q_usercentric_4_note",
+   "fieldtype": "Long Text",
+   "label": "Toelichting"
   },
   {
    "fieldname": "q_usercentric_5",
@@ -226,8 +369,14 @@
    "options": "n/a\nyes\nno"
   },
   {
+   "fieldname": "q_usercentric_5_note",
+   "fieldtype": "Long Text",
+   "label": "Toelichting"
+  },
+  {
    "fieldname": "score_open",
    "fieldtype": "Float",
+   "in_list_view": 1,
    "in_preview": 1,
    "label": "Score Open"
   },
@@ -256,35 +405,40 @@
    "label": "Score Gebruikergericht"
   },
   {
-   "fieldname": "tool_name",
-   "fieldtype": "Data",
-   "label": "Naam"
+   "fieldname": "score",
+   "fieldtype": "Float",
+   "label": "Score"
   },
   {
-   "fieldname": "tool_usage",
-   "fieldtype": "Long Text",
-   "label": "Beschijf waarvoor de tool in uw organisatie gebruikt wordt"
+   "fieldname": "scan",
+   "fieldtype": "Link",
+   "label": "Scan",
+   "options": "Scans"
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2021-11-17 15:20:41.388680",
+ "modified": "2021-11-29 16:32:53.712436",
  "modified_by": "Administrator",
  "module": "Spoelkeuken",
- "name": "AssessmentTool",
+ "name": "ToolToets",
  "owner": "Administrator",
  "permissions": [
   {
+   "amend": 1,
+   "cancel": 1,
    "create": 1,
    "delete": 1,
    "email": 1,
    "export": 1,
+   "if_owner": 1,
    "print": 1,
    "read": 1,
    "report": 1,
-   "role": "System Manager",
+   "role": "Spoelkeuken Deelnemer",
    "share": 1,
+   "submit": 1,
    "write": 1
   },
   {
