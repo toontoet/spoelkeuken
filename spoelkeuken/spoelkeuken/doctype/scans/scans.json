@@ -10,8 +10,15 @@
   "organisation",
   "date",
   "title",
-  "descrioption",
-  "inventory"
+  "description",
+  "inventory",
+  "tools",
+  "score",
+  "score_open",
+  "score_transparent",
+  "score_accountable",
+  "score_souvereign",
+  "score_usercentric"
  ],
  "fields": [
   {
@@ -37,26 +44,80 @@
    "reqd": 1
   },
   {
-   "fieldname": "descrioption",
+   "description": "Maak een lijst van alle tools die je in deze scan wilt onderzoeken. Zet iedere tool op een nieuwe regel. Je kunt zoveel tools toetsen als je wilt. Het is ook mogelijk om later nog extra tools toe te voegen.",
+   "fieldname": "inventory",
+   "fieldtype": "Long Text",
+   "label": "Inventarisatie",
+   "set_only_once": 1
+  },
+  {
+   "fieldname": "description",
    "fieldtype": "Long Text",
    "label": "Beschrijf waar je je op wilt richten met deze scan",
    "reqd": 1
   },
   {
-   "description": "Maak een lijst van alle tools die je in deze scan wilt onderzoeken. Zet iedere tool op een nieuwe regel. Je kunt zoveel tools toetsen als je wilt. Het is ook mogelijk om later nog extra tools toe te voegen.",
-   "fieldname": "inventory",
-   "fieldtype": "Long Text",
-   "label": "Inventarisatie"
+   "fieldname": "tools",
+   "fieldtype": "Table",
+   "label": "Tools",
+   "options": "ScanTool"
+  },
+  {
+   "fieldname": "score_open",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "in_preview": 1,
+   "label": "Score Open",
+   "read_only": 1
+  },
+  {
+   "fieldname": "score_transparent",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "in_preview": 1,
+   "label": "Score Transparant",
+   "read_only": 1
+  },
+  {
+   "fieldname": "score_accountable",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "in_preview": 1,
+   "label": "Score Aansprakelijk",
+   "read_only": 1
+  },
+  {
+   "fieldname": "score_souvereign",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "in_preview": 1,
+   "label": "Score Autonoom",
+   "read_only": 1
+  },
+  {
+   "fieldname": "score_usercentric",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "in_preview": 1,
+   "label": "Score Gebruikergericht",
+   "read_only": 1
+  },
+  {
+   "fieldname": "score",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "in_preview": 1,
+   "label": "Score",
+   "read_only": 1
   }
  ],
- "index_web_pages_for_search": 1,
  "links": [
   {
    "link_doctype": "ToolToets",
    "link_fieldname": "scan"
   }
  ],
- "modified": "2021-11-29 16:33:38.648822",
+ "modified": "2021-12-15 15:09:36.202202",
  "modified_by": "Administrator",
  "module": "Spoelkeuken",
  "name": "Scans",
@@ -87,6 +148,7 @@
    "write": 1
   },
   {
+   "create": 1,
    "email": 1,
    "export": 1,
    "print": 1,
@@ -94,7 +156,8 @@
    "report": 1,
    "role": "Spoelkeuken Deelnemer",
    "select": 1,
-   "share": 1
+   "share": 1,
+   "write": 1
   }
  ],
  "sort_field": "modified",

@@ -9,7 +9,13 @@
  "field_order": [
   "url",
   "logo",
-  "description"
+  "description",
+   "score",
+  "score_open",
+  "score_transparent",
+  "score_accountable",
+  "score_souvereign",
+  "score_usercentric"
  ],
  "fields": [
   {
@@ -27,12 +33,60 @@
    "fieldname": "description",
    "fieldtype": "Text Editor",
    "label": "description"
+  },
+  {
+   "fieldname": "score_open",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "in_preview": 1,
+   "label": "Score Open",
+   "read_only": 1
+  },
+  {
+   "fieldname": "score_transparent",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "in_preview": 1,
+   "label": "Score Transparant",
+   "read_only": 1
+  },
+  {
+   "fieldname": "score_accountable",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "in_preview": 1,
+   "label": "Score Aansprakelijk",
+   "read_only": 1
+  },
+  {
+   "fieldname": "score_souvereign",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "in_preview": 1,
+   "label": "Score Autonoom",
+   "read_only": 1
+  },
+  {
+   "fieldname": "score_usercentric",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "in_preview": 1,
+   "label": "Score Gebruikergericht",
+   "read_only": 1
+  },
+  {
+   "fieldname": "score",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "in_preview": 1,
+   "label": "Score",
+   "read_only": 1
   }
  ],
  "image_field": "logo",
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2021-11-16 15:57:30.387205",
+ "modified": "2021-11-16 15:58:30.387205",
  "modified_by": "Administrator",
  "module": "Spoelkeuken",
  "name": "Tool",

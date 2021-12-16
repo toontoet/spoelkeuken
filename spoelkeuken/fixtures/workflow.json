@@ -1,0 +1,332 @@
+[
+ {
+  "docstatus": 0,
+  "doctype": "Workflow",
+  "document_type": "Organisation",
+  "is_active": 1,
+  "modified": "2021-12-15 21:07:28.808995",
+  "name": "Spoelkeuken Organisation Workflow",
+  "override_status": 0,
+  "parent": null,
+  "parentfield": null,
+  "parenttype": null,
+  "send_email_alert": 1,
+  "states": [
+   {
+    "allow_edit": "Spoelkeuken Manager",
+    "doc_status": "0",
+    "is_optional_state": 0,
+    "message": null,
+    "next_action_email_template": null,
+    "parent": "Spoelkeuken Organisation Workflow",
+    "parentfield": "states",
+    "parenttype": "Workflow",
+    "state": "New",
+    "update_field": null,
+    "update_value": null
+   },
+   {
+    "allow_edit": "Spoelkeuken Manager",
+    "doc_status": "0",
+    "is_optional_state": 0,
+    "message": null,
+    "next_action_email_template": null,
+    "parent": "Spoelkeuken Organisation Workflow",
+    "parentfield": "states",
+    "parenttype": "Workflow",
+    "state": "Active",
+    "update_field": null,
+    "update_value": null
+   },
+   {
+    "allow_edit": "Spoelkeuken Manager",
+    "doc_status": "0",
+    "is_optional_state": 0,
+    "message": null,
+    "next_action_email_template": null,
+    "parent": "Spoelkeuken Organisation Workflow",
+    "parentfield": "states",
+    "parenttype": "Workflow",
+    "state": "Offline",
+    "update_field": null,
+    "update_value": null
+   }
+  ],
+  "transitions": [
+   {
+    "action": "Activeer",
+    "allow_self_approval": 1,
+    "allowed": "Spoelkeuken Manager",
+    "condition": null,
+    "next_state": "Active",
+    "parent": "Spoelkeuken Organisation Workflow",
+    "parentfield": "transitions",
+    "parenttype": "Workflow",
+    "state": "New"
+   },
+   {
+    "action": "Activeer",
+    "allow_self_approval": 1,
+    "allowed": "Spoelkeuken Manager",
+    "condition": null,
+    "next_state": "Active",
+    "parent": "Spoelkeuken Organisation Workflow",
+    "parentfield": "transitions",
+    "parenttype": "Workflow",
+    "state": "Offline"
+   },
+   {
+    "action": "Disable",
+    "allow_self_approval": 1,
+    "allowed": "Spoelkeuken Manager",
+    "condition": null,
+    "next_state": "Offline",
+    "parent": "Spoelkeuken Organisation Workflow",
+    "parentfield": "transitions",
+    "parenttype": "Workflow",
+    "state": "Active"
+   }
+  ],
+  "workflow_name": "Spoelkeuken Organisation Workflow",
+  "workflow_state_field": "status"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow",
+  "document_type": "Tool",
+  "is_active": 1,
+  "modified": "2021-12-15 21:15:40.981190",
+  "name": "Spoelkeuken Tool Workflow",
+  "override_status": 0,
+  "parent": null,
+  "parentfield": null,
+  "parenttype": null,
+  "send_email_alert": 1,
+  "states": [
+   {
+    "allow_edit": "Spoelkeuken Manager",
+    "doc_status": "0",
+    "is_optional_state": 0,
+    "message": null,
+    "next_action_email_template": null,
+    "parent": "Spoelkeuken Tool Workflow",
+    "parentfield": "states",
+    "parenttype": "Workflow",
+    "state": "New",
+    "update_field": null,
+    "update_value": null
+   },
+   {
+    "allow_edit": "Spoelkeuken Manager",
+    "doc_status": "0",
+    "is_optional_state": 0,
+    "message": null,
+    "next_action_email_template": null,
+    "parent": "Spoelkeuken Tool Workflow",
+    "parentfield": "states",
+    "parenttype": "Workflow",
+    "state": "Active",
+    "update_field": null,
+    "update_value": null
+   },
+   {
+    "allow_edit": "Spoelkeuken Manager",
+    "doc_status": "0",
+    "is_optional_state": 0,
+    "message": null,
+    "next_action_email_template": null,
+    "parent": "Spoelkeuken Tool Workflow",
+    "parentfield": "states",
+    "parenttype": "Workflow",
+    "state": "Offline",
+    "update_field": null,
+    "update_value": null
+   }
+  ],
+  "transitions": [
+   {
+    "action": "Activeer",
+    "allow_self_approval": 1,
+    "allowed": "Spoelkeuken Manager",
+    "condition": null,
+    "next_state": "Active",
+    "parent": "Spoelkeuken Tool Workflow",
+    "parentfield": "transitions",
+    "parenttype": "Workflow",
+    "state": "New"
+   },
+   {
+    "action": "Activeer",
+    "allow_self_approval": 1,
+    "allowed": "Spoelkeuken Manager",
+    "condition": null,
+    "next_state": "Active",
+    "parent": "Spoelkeuken Tool Workflow",
+    "parentfield": "transitions",
+    "parenttype": "Workflow",
+    "state": "Offline"
+   },
+   {
+    "action": "Disable",
+    "allow_self_approval": 1,
+    "allowed": "Spoelkeuken Manager",
+    "condition": null,
+    "next_state": "Offline",
+    "parent": "Spoelkeuken Tool Workflow",
+    "parentfield": "transitions",
+    "parenttype": "Workflow",
+    "state": "Active"
+   }
+  ],
+  "workflow_name": "Spoelkeuken Tool Workflow",
+  "workflow_state_field": "status"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow",
+  "document_type": "Scans",
+  "is_active": 1,
+  "modified": "2021-12-15 21:21:32.994675",
+  "name": "Spoelkeuken Scan Workflow",
+  "override_status": 0,
+  "parent": null,
+  "parentfield": null,
+  "parenttype": null,
+  "send_email_alert": 1,
+  "states": [
+   {
+    "allow_edit": "Spoelkeuken Manager",
+    "doc_status": "0",
+    "is_optional_state": 0,
+    "message": null,
+    "next_action_email_template": null,
+    "parent": "Spoelkeuken Scan Workflow",
+    "parentfield": "states",
+    "parenttype": "Workflow",
+    "state": "New",
+    "update_field": null,
+    "update_value": null
+   },
+   {
+    "allow_edit": "Spoelkeuken Manager",
+    "doc_status": "0",
+    "is_optional_state": 0,
+    "message": null,
+    "next_action_email_template": null,
+    "parent": "Spoelkeuken Scan Workflow",
+    "parentfield": "states",
+    "parenttype": "Workflow",
+    "state": "Active",
+    "update_field": null,
+    "update_value": null
+   },
+   {
+    "allow_edit": "Spoelkeuken Manager",
+    "doc_status": "0",
+    "is_optional_state": 0,
+    "message": null,
+    "next_action_email_template": null,
+    "parent": "Spoelkeuken Scan Workflow",
+    "parentfield": "states",
+    "parenttype": "Workflow",
+    "state": "Archived",
+    "update_field": null,
+    "update_value": null
+   },
+   {
+    "allow_edit": "Spoelkeuken Manager",
+    "doc_status": "0",
+    "is_optional_state": 0,
+    "message": null,
+    "next_action_email_template": null,
+    "parent": "Spoelkeuken Scan Workflow",
+    "parentfield": "states",
+    "parenttype": "Workflow",
+    "state": "Offline",
+    "update_field": null,
+    "update_value": null
+   }
+  ],
+  "transitions": [
+   {
+    "action": "Activeer",
+    "allow_self_approval": 1,
+    "allowed": "Spoelkeuken Manager",
+    "condition": null,
+    "next_state": "Active",
+    "parent": "Spoelkeuken Scan Workflow",
+    "parentfield": "transitions",
+    "parenttype": "Workflow",
+    "state": "New"
+   },
+   {
+    "action": "Disable",
+    "allow_self_approval": 1,
+    "allowed": "Spoelkeuken Manager",
+    "condition": null,
+    "next_state": "Offline",
+    "parent": "Spoelkeuken Scan Workflow",
+    "parentfield": "transitions",
+    "parenttype": "Workflow",
+    "state": "Active"
+   },
+   {
+    "action": "Archive",
+    "allow_self_approval": 1,
+    "allowed": "Spoelkeuken Manager",
+    "condition": null,
+    "next_state": "Archived",
+    "parent": "Spoelkeuken Scan Workflow",
+    "parentfield": "transitions",
+    "parenttype": "Workflow",
+    "state": "Active"
+   },
+   {
+    "action": "Disable",
+    "allow_self_approval": 1,
+    "allowed": "Spoelkeuken Manager",
+    "condition": null,
+    "next_state": "Offline",
+    "parent": "Spoelkeuken Scan Workflow",
+    "parentfield": "transitions",
+    "parenttype": "Workflow",
+    "state": "Archived"
+   },
+   {
+    "action": "Activeer",
+    "allow_self_approval": 1,
+    "allowed": "Spoelkeuken Manager",
+    "condition": null,
+    "next_state": "Active",
+    "parent": "Spoelkeuken Scan Workflow",
+    "parentfield": "transitions",
+    "parenttype": "Workflow",
+    "state": "Archived"
+   },
+   {
+    "action": "Activeer",
+    "allow_self_approval": 1,
+    "allowed": "Spoelkeuken Manager",
+    "condition": null,
+    "next_state": "Active",
+    "parent": "Spoelkeuken Scan Workflow",
+    "parentfield": "transitions",
+    "parenttype": "Workflow",
+    "state": "Offline"
+   },
+   {
+    "action": "Archive",
+    "allow_self_approval": 1,
+    "allowed": "Spoelkeuken Manager",
+    "condition": null,
+    "next_state": "Archived",
+    "parent": "Spoelkeuken Scan Workflow",
+    "parentfield": "transitions",
+    "parenttype": "Workflow",
+    "state": "Offline"
+   }
+  ],
+  "workflow_name": "Spoelkeuken Scan Workflow",
+  "workflow_state_field": "status"
+ }
+]

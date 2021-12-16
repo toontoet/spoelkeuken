@@ -1,7 +1,7 @@
 {
  "actions": [],
  "allow_rename": 1,
- "creation": "2021-11-01 20:24:00.002981",
+ "creation": "2021-12-15 15:07:04.949068",
  "doctype": "DocType",
  "editable_grid": 1,
  "engine": "InnoDB",
@@ -9,8 +9,6 @@
   "tool",
   "tool_name",
   "tool_usage",
-  "scan",
-  "amended_from",
   "q_open_1",
   "q_open_1_note",
   "q_open_2",
@@ -61,13 +59,14 @@
   "q_usercentric_4_note",
   "q_usercentric_5",
   "q_usercentric_5_note",
+  "score",
   "score_open",
   "score_transparent",
   "score_accountable",
   "score_souvereign",
   "score_usercentric",
-  "score",
-  "organisation"
+  "organisation",
+  "amended_from"
  ],
  "fields": [
   {
@@ -89,15 +88,6 @@
    "fieldname": "tool_usage",
    "fieldtype": "Long Text",
    "label": "Beschijf waarvoor de tool in uw organisatie gebruikt wordt"
-  },
-  {
-   "fieldname": "amended_from",
-   "fieldtype": "Link",
-   "label": "Amended From",
-   "no_copy": 1,
-   "options": "ToolToets",
-   "print_hide": 1,
-   "read_only": 1
   },
   {
    "fieldname": "q_open_1",
@@ -379,87 +369,75 @@
    "fieldtype": "Float",
    "in_list_view": 1,
    "in_preview": 1,
-   "label": "Score Open"
+   "label": "Score Open",
+   "read_only": 1
   },
   {
    "fieldname": "score_transparent",
    "fieldtype": "Float",
+   "in_list_view": 1,
    "in_preview": 1,
-   "label": "Score Transparant"
+   "label": "Score Transparant",
+   "read_only": 1
   },
   {
    "fieldname": "score_accountable",
    "fieldtype": "Float",
+   "in_list_view": 1,
    "in_preview": 1,
-   "label": "Score Aansprakelijk"
+   "label": "Score Aansprakelijk",
+   "read_only": 1
   },
   {
    "fieldname": "score_souvereign",
    "fieldtype": "Float",
+   "in_list_view": 1,
    "in_preview": 1,
-   "label": "Score Autonoom"
+   "label": "Score Autonoom",
+   "read_only": 1
   },
   {
    "fieldname": "score_usercentric",
    "fieldtype": "Float",
+   "in_list_view": 1,
    "in_preview": 1,
-   "label": "Score Gebruikergericht"
+   "label": "Score Gebruikergericht",
+   "read_only": 1
   },
   {
    "fieldname": "score",
    "fieldtype": "Float",
-   "label": "Score"
-  },
-  {
-   "fieldname": "scan",
-   "fieldtype": "Link",
-   "label": "Scan",
-   "options": "Scans"
+   "in_list_view": 1,
+   "in_preview": 1,
+   "label": "Score",
+   "read_only": 1
   },
   {
    "fieldname": "organisation",
    "fieldtype": "Link",
    "label": "Organisation",
    "options": "Organisation"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "ScanTool",
+   "print_hide": 1,
+   "read_only": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
+ "istable": 1,
  "links": [],
- "modified": "2021-11-30 15:40:31.372659",
+ "modified": "2021-12-16 09:57:39.986429",
  "modified_by": "Administrator",
  "module": "Spoelkeuken",
- "name": "ToolToets",
+ "name": "ScanTool",
  "owner": "Administrator",
- "permissions": [
-  {
-   "amend": 1,
-   "cancel": 1,
-   "create": 1,
-   "delete": 1,
-   "email": 1,
-   "export": 1,
-   "print": 1,
-   "read": 1,
-   "report": 1,
-   "role": "Spoelkeuken Deelnemer",
-   "share": 1,
-   "submit": 1,
-   "write": 1
-  },
-  {
-   "create": 1,
-   "delete": 1,
-   "email": 1,
-   "export": 1,
-   "print": 1,
-   "read": 1,
-   "report": 1,
-   "role": "Spoelkeuken Manager",
-   "share": 1,
-   "write": 1
-  }
- ],
+ "permissions": [],
  "sort_field": "modified",
  "sort_order": "DESC",
  "track_changes": 1

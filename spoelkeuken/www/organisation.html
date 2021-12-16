@@ -1,0 +1,199 @@
+<div class="container pt-md-14">
+
+      <div class="row">
+      	<div class="col-4 col-md-2 text-md-right ">
+      		<div class="logo">
+      			<img src="{{org.logo}}" class=" rounded" alt="...">
+        	</div>
+        </div>
+        <div class="col-8 col-md-10">
+        	<h1 class="title fw-light">{{org.name}}</h1>
+        	{% if org.url %}<a href="{{org.url}}">{{org.url}}</a>{%endif%}
+    	</div>
+      </div>
+
+</div>
+
+
+<section id="about" class="section-bg">
+    <div class="container ">
+       {% if org.description %}
+       <div class="row">
+       	<div class="col-12 col-md-2 text-md-right">
+       		<strong>over</strong>
+       	</div>
+       	<div class="col-12 col-md-10">
+        	{{org.description}}
+    	</div>
+
+    	</div>
+    	{% endif %}
+
+    	{% if org.score == -1 %}
+    	<div class="row">
+       	<div class="col-12 col-md-2 text-md-right">
+       		<strong>resultaat</strong>
+       	</div>
+       	<div class="col-12 col-md-10">
+       		<div class="no-result-caption">{{ content.no_result }}</div>
+  			<div class="no-results"></div>
+        </div>
+    	</div>
+
+
+    	{%else%}
+    	<div class="row">
+       	<div class="col-12 col-md-2 text-md-right">
+       		<strong>resultaat</strong>
+       	</div>
+       	<div class="col-12 col-md-10">
+        	
+
+
+		<div class="scoreboard">
+			<div class="row total">
+				<div class="caption col-12 col-md-2">
+					Totaal
+				</div>
+				<div class="col-12 col-md-8">
+					<div class="grad">
+							{% if org.score > -1 %}
+							<div class="indicator score-{{ (org.score * 10)|round|int  }}" ></div>
+							{% endif %}
+						</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="caption col-12 col-md-2">
+					Open
+				</div>
+				<div class="col-12 col-md-8">
+					<div class="grad">
+							{% if org.score_open > -1 %}
+							<div class="indicator score-{{ (org.score_open * 10)|round|int  }}" ></div>
+							{% endif %}
+						</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="caption col-12 col-md-2">
+					Transparant
+				</div>
+				<div class="col-12 col-md-8">
+					<div class="grad">
+							{% if org.score_transparent > -1 %}
+							<div class="indicator score-{{ (org.score_transparent * 10)|round|int  }}" ></div>
+							{% endif %}
+						</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="caption col-12 col-md-2">
+					Accountable
+				</div>
+				<div class="col-12 col-md-8">
+					<div class="grad">
+							{% if org.score_accountable >-1 %}
+							<div class="indicator score-{{ (org.score_accountable * 10)|round|int  }}" ></div>
+							{% endif %}
+						</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="caption col-12 col-md-2">
+					Souverijn
+				</div>
+				<div class="col-12 col-md-8">
+					<div class="grad">
+							{% if org.score_souvereign > -1 %}
+							<div class="indicator score-{{ (org.score_souvereign * 10)|round|int  }}" ></div>
+							{% endif %}
+						</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="caption col-12 col-md-2">
+					Gebruikergericht
+				</div>
+				<div class="col-12 col-md-8">
+					<div class="grad">
+							{% if org.score_usercentric > -1 %}
+							<div class="indicator score-{{ (org.score_usercentric * 10)|round|int  }}" ></div>
+							{% endif %}
+						</div>
+				</div>
+			</div>
+		</div>
+
+    	</div>
+
+
+    	</div>
+
+    	<div class="row">
+       	<div class="col-12 col-md-2 text-md-right">
+       		<strong>tools</strong>
+       	</div>
+       	<div class="col-12 col-md-10">
+        	<p class="">In het onderzoek zijn de volgende tools getoetst aan de 5 publieke waarden van PublicPaces:</p>
+        	<div id="toolboard">
+        	<div class="row no-gutters clients-wrap clearfix wow fadeInUp" style="visibility: visible; animation-name: fadeInUp;">
+	            {% for tool in tools %}
+	            <div class="col-lg-3 col-md-4 col-xs-6">
+	                <div class="client-logo"><a href="/tool/{{tool.name}}"><img src="{{tool.logo}}" class="img-fluid" alt=""></a></div>
+	                <div class="tool-name">{{tool.name}}</div>
+
+	            </div>
+	            {% endfor %}
+	        </div>
+    	</div>
+    	
+
+
+    	</div>
+    </div>
+
+    {% endif %}
+
+    {% if org.plan %}
+    <div class="row">
+       	<div class="col-12 col-md-2 text-md-right">
+       		<strong>.plan</strong>
+       	</div>
+       	<div class="col-12 col-md-10">
+        	{{org.plan }}
+    	</div>
+    	
+
+    </div>
+    {% endif %}
+	{% if stories %}
+	<div class="row">
+   	<div class="col-12 col-md-2 text-md-right">
+   		<strong>verhalen</strong>
+   	</div>
+   	<div class="col-12 col-md-10">
+    	 <div class="news-list row d-flex">
+	 
+			  <ul class="news-list  text-left">
+				{% for story in stories %}
+	                <li>
+							<a href="{{story.url}}">{{story.title}}</a>
+					</li>
+	            {% endfor %}
+				</ul>
+			</div>
+	</div>
+	
+
+	</div>
+	{% endif %}
+
+
+
+       
+    </div>
+</section>
+
+
+

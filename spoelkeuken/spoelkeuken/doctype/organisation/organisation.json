@@ -9,7 +9,16 @@
  "field_order": [
   "url",
   "logo",
-  "description"
+  "description",
+  "plan",
+  "amended_from",
+  "section_break_6",
+  "score",
+  "score_open",
+  "score_transparent",
+  "score_accountable",
+  "score_souvereign",
+  "score_usercentric"
  ],
  "fields": [
   {
@@ -21,23 +30,84 @@
   {
    "fieldname": "logo",
    "fieldtype": "Attach Image",
-   "label": "logo"
+   "label": "Logo"
   },
   {
    "fieldname": "description",
    "fieldtype": "Text Editor",
    "label": "Description"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Organisation",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "score_open",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "in_preview": 1,
+   "label": "Score Open",
+   "read_only": 1
+  },
+  {
+   "fieldname": "score_transparent",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "in_preview": 1,
+   "label": "Score Transparant",
+   "read_only": 1
+  },
+  {
+   "fieldname": "score_accountable",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "in_preview": 1,
+   "label": "Score Aansprakelijk",
+   "read_only": 1
+  },
+  {
+   "fieldname": "score_souvereign",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "in_preview": 1,
+   "label": "Score Autonoom",
+   "read_only": 1
+  },
+  {
+   "fieldname": "score_usercentric",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "in_preview": 1,
+   "label": "Score Gebruikergericht",
+   "read_only": 1
+  },
+  {
+   "fieldname": "score",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "in_preview": 1,
+   "label": "Score",
+   "read_only": 1
+  },
+  {
+   "fieldname": "plan",
+   "fieldtype": "Text Editor",
+   "label": ".Plan"
+  },
+  {
+   "fieldname": "section_break_6",
+   "fieldtype": "Section Break"
   }
  ],
  "image_field": "logo",
  "index_web_pages_for_search": 1,
- "links": [
-  {
-   "link_doctype": "Assessment",
-   "link_fieldname": "organisation"
-  }
- ],
- "modified": "2021-11-16 15:55:50.058406",
+ "links": [],
+ "modified": "2021-12-16 14:12:44.342623",
  "modified_by": "Administrator",
  "module": "Spoelkeuken",
  "name": "Organisation",
@@ -54,20 +124,9 @@
    "role": "System Manager",
    "share": 1,
    "write": 1
-  },
-  {
-   "create": 1,
-   "delete": 1,
-   "email": 1,
-   "export": 1,
-   "print": 1,
-   "read": 1,
-   "report": 1,
-   "role": "Spoelkeuken Manager",
-   "share": 1,
-   "write": 1
   }
  ],
+ "quick_entry": 1,
  "sort_field": "modified",
  "sort_order": "DESC",
  "track_changes": 1

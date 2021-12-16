@@ -1,0 +1,83 @@
+
+<header class="masthead rounded">
+  <div class="container pt-md-14">
+    <div class="row  align-items-left">
+      <div class="col-12">
+        <h1 class="fw-light mt-10">{{content.homepage_lead_title}}</h1>
+      </div>
+	  <div class="col-md-8 col-11 mt-md-5 ">
+	  	<div class="body">
+        {{content.homepage_lead_body}}
+        </div>
+        <button type="button" class="btn btn-primary">Lees meer ...</button>
+      </div>
+    </div>
+  </div>
+</header>
+
+
+<section id="whatis" class="section-bg">
+    <div class="container ">
+        <div class="section-header">
+            <h3>{{content.homepage_intro_title}}</h3>
+            <div class="body col-12">{{content.homepage_intro_body}}</div>
+        </div>
+		<div class="accordion" id="accordionExample">
+		  <div class="card">
+		    <div class="card-header" id="headingOne">
+		      <h2 class="mb-0">
+		        <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+		          {{content.homepage_step_1_title}}
+		        </button>
+		      </h2>
+		    </div>
+
+		    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+		      <div class="card-body">
+		        {{content.homepage_step_1_body}}
+		      </div>
+		    </div>
+		  </div>
+		  <div class="card">
+		    <div class="card-header" id="headingTwo">
+		      <h2 class="mb-0">
+		        <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+		          {{content.homepage_step_2_title}}
+		        </button>
+		      </h2>
+		    </div>
+		    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+		      <div class="card-body">
+		        {{content.homepage_step_2_body}}
+		      </div>
+		    </div>
+		  </div>
+		  <div class="card">
+		    <div class="card-header" id="headingThree">
+		      <h2 class="mb-0">
+		        <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+		          {{content.homepage_step_3_title}}
+		        </button>
+		      </h2>
+		    </div>
+		    <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+		      <div class="card-body">
+		        {{content.homepage_step_3_body}}
+		      </div>
+		    </div>
+		  </div>
+		</div>
+
+    </div>
+</section>
+
+
+
+{% include 'templates/includes/tools.html' %}
+
+{% include 'templates/includes/news.html' %}
+
+
+{% include 'templates/includes/partners.html' %}
+
+

@@ -9,6 +9,20 @@ app_color = "red"
 app_email = "toon@toetenel.com"
 app_license = "MIT"
 
+
+website_route_rules = [
+    {"from_route": "/scans/details/<name>", "to_route": "scans/details"},
+    {"from_route": "/organisation/<name>", "to_route": "organisation"},
+    {"from_route": "/tool/<name>", "to_route": "tool"},
+]
+
+# website_context = {
+# 	"favicon": "/assets/erpnext/images/yourlogo",
+# 	"splash_image": "/assets/erpnext/images/yourlogo"
+# }
+
+brand_html = '<div>Spoelkeuken</div>'
+
 # Includes in <head>
 # ------------------
 
@@ -17,11 +31,11 @@ app_license = "MIT"
 # app_include_js = "/assets/spoelkeuken/js/spoelkeuken.js"
 
 # include js, css files in header of web template
-# web_include_css = "/assets/spoelkeuken/css/spoelkeuken.css"
+web_include_css = "/assets/spoelkeuken/css/spoelkeuken.css"
 # web_include_js = "/assets/spoelkeuken/js/spoelkeuken.js"
 
 # include custom scss in every website theme (without file extension ".scss")
-# website_theme_scss = "spoelkeuken/public/scss/website"
+website_theme_scss = "public/scss/website"
 
 # include js, css files in header of web form
 # webform_include_js = {"doctype": "public/js/doctype.js"}
@@ -40,7 +54,7 @@ app_license = "MIT"
 # ----------
 
 # application home page (will override Website Settings)
-# home_page = "login"
+home_page = "homepage"
 
 # website user home page (by Role)
 # role_home_page = {
@@ -51,13 +65,22 @@ app_license = "MIT"
 # ----------
 
 # automatically create page for each record of this doctype
-# website_generators = ["Web Page"]
+#website_generators = ["Scans"]
 
 # Installation
 # ------------
 
 # before_install = "spoelkeuken.install.before_install"
-# after_install = "spoelkeuken.install.after_install"
+#after_install = "spoelkeuken.install.after_install"
+
+fixtures = [
+    # export all records from the Category table
+    "Website Settings",
+    "Website Content",
+    {"dt": "Workflow", "filters": [["name", "like", "Spoelkeuken%"]]},
+    {"dt": "Workflow State", "filters": [["workflow_state_name", "in", ["New","Active","Archived","Offline"]]]},
+    {"dt": "Workflow Action Master", "filters": [["name", "in", ["Archive","Activeer","Disable"]]]}
+]
 
 # Desk Notifications
 # ------------------
@@ -69,13 +92,19 @@ app_license = "MIT"
 # -----------
 # Permissions evaluated in scripted ways
 
-# permission_query_conditions = {
-# 	"Event": "frappe.desk.doctype.event.event.get_permission_query_conditions",
-# }
+permission_query_conditions = {
+	"Scans": "spoelkeuken.permissions.scan_query",
+	"ToolToets": "spoelkeuken.permissions.toets_query",
+}
 #
 # has_permission = {
 # 	"Event": "frappe.desk.doctype.event.event.has_permission",
 # }
+
+has_permission = {
+    "Scans": "spoelkeuken.permissions.scan_has_permission",
+    "ToolToets": "spoelkeuken.permissions.toets_has_permission"
+}
 
 # DocType Class
 # ---------------

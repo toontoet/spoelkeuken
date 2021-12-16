@@ -1,0 +1,27 @@
+{% if participants %}
+<section id="clients" class="section-bg">
+    <div class="container">
+        <div class="section-header">
+            <h3>{{content.homepage_participants_title}}</h3>
+            <div class="body col-md-8">{{content.homepage_participants_body}}</div>
+        </div>
+        <div class="row no-gutters clients-wrap clearfix wow fadeInUp" style="visibility: visible; animation-name: fadeInUp;">
+
+            {% for org in participants %}
+            <div class="col-lg-3 col-md-4 col-xs-6">
+                <div class="client-logo">
+                <a href="/organisation/{{org.name}}">
+                    {% if org.logo != None %}
+                    <img src="{{org.logo}}" class="img-fluid" alt="">
+                    {% else %}
+                    {{org.name}}
+                    {% endif %}
+                </a>
+                </div>
+            </div>
+            {% endfor %}
+            
+        </div>
+    </div>
+</section>
+{% endif %}

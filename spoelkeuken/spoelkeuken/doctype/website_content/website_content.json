@@ -1,0 +1,137 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2021-12-15 21:59:39.790572",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "homepage_lead_title",
+  "homepage_lead_body",
+  "homepage_intro_title",
+  "homepage_intro_body",
+  "homepage_step_1_title",
+  "homepage_step_1_body",
+  "homepage_step_2_title",
+  "homepage_step_2_body",
+  "homepage_step_3_title",
+  "homepage_step_3_body",
+  "homepage_tools_title",
+  "homepage_tools_body",
+  "homepage_stories_title",
+  "homepage_stories_body",
+  "homepage_participants_title",
+  "homepage_participants_body",
+  "no_result"
+ ],
+ "fields": [
+  {
+   "fieldname": "homepage_intro_title",
+   "fieldtype": "Data",
+   "label": "Homepage Intro Title"
+  },
+  {
+   "fieldname": "homepage_intro_body",
+   "fieldtype": "Text Editor",
+   "label": "Homepage Intro Body"
+  },
+  {
+   "fieldname": "homepage_step_1_title",
+   "fieldtype": "Data",
+   "label": "Homepage Intro Step 1 Title"
+  },
+  {
+   "fieldname": "homepage_step_1_body",
+   "fieldtype": "Text Editor",
+   "label": "Homepage Intro Step 1 Body"
+  },
+  {
+   "fieldname": "homepage_step_2_title",
+   "fieldtype": "Data",
+   "label": "Homepage Intro Step 2 Title"
+  },
+  {
+   "fieldname": "homepage_step_2_body",
+   "fieldtype": "Text Editor",
+   "label": "Homepage Intro Step 2 Body"
+  },
+  {
+   "fieldname": "homepage_step_3_title",
+   "fieldtype": "Data",
+   "label": "Homepage Intro Step 3 Title"
+  },
+  {
+   "fieldname": "homepage_step_3_body",
+   "fieldtype": "Text Editor",
+   "label": "Homepage Intro Step 3 Body"
+  },
+  {
+   "fieldname": "homepage_tools_title",
+   "fieldtype": "Data",
+   "label": "Homepage Tools Title"
+  },
+  {
+   "fieldname": "homepage_tools_body",
+   "fieldtype": "Text Editor",
+   "label": "Homepage Tools Body"
+  },
+  {
+   "fieldname": "homepage_stories_title",
+   "fieldtype": "Data",
+   "label": "Homepage Stories Title"
+  },
+  {
+   "fieldname": "homepage_stories_body",
+   "fieldtype": "Text Editor",
+   "label": "Homepage Stories Body"
+  },
+  {
+   "fieldname": "homepage_participants_title",
+   "fieldtype": "Data",
+   "label": "Homepage Participants Title"
+  },
+  {
+   "fieldname": "homepage_participants_body",
+   "fieldtype": "Text Editor",
+   "label": "Homepage Participants Body"
+  },
+  {
+   "fieldname": "homepage_lead_title",
+   "fieldtype": "Data",
+   "label": "Homepage Lead Title"
+  },
+  {
+   "fieldname": "homepage_lead_body",
+   "fieldtype": "Text Editor",
+   "label": "Homepage Head Body"
+  },
+  {
+   "fieldname": "no_result",
+   "fieldtype": "Text Editor",
+   "label": "No Results"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "issingle": 1,
+ "links": [],
+ "modified": "2021-12-16 14:58:08.223186",
+ "modified_by": "Administrator",
+ "module": "Spoelkeuken",
+ "name": "Website Content",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

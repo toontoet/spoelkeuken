@@ -1,0 +1,256 @@
+/*
+ spoelkeuken.css
+*/
+
+.masthead {
+
+  min-height: 400px;
+  background-image: url('/assets/spoelkeuken/img/header.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.masthead .body {
+	margin-bottom: 20px;
+}
+
+.title {
+	margin-bottom: 0;
+}
+
+.no-results {
+  min-height: 400px;
+  background-image: url('/assets/spoelkeuken/img/wash_bowl.jpg');
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.no-result-caption {
+	padding: 50px;
+	text-align: center;
+	font-style: italic;
+}
+
+/* News */
+.news-list ul li::before {
+  content: "»";
+  color: #13C4A5;
+  font-size: 18px;
+}
+
+.news-list ul li {
+	list-style: none;
+}
+
+.news-list ul {
+	padding: 0;
+	margin: 0;
+}
+
+
+/* Partners */
+
+ .section-header h3 {
+     font-size: 36px;
+     color: #283d50;
+     text-align: center;
+     font-weight: 500;
+     position: relative
+ }
+
+ .section-header div.body {
+     text-align: center;
+     margin: auto;
+     font-size: 15px;
+     padding-bottom: 60px;
+     color: #556877;
+     
+ }
+ .section-header div.body p {
+ 	text-align: center;
+ }
+
+ #clients {
+     padding: 60px 0
+ }
+
+ #news {
+     padding: 60px 0
+ }
+
+
+ #clients .clients-wrap {
+/*     border-top: 1px solid #d6eaff;
+     border-left: 1px solid #d6eaff;*/
+     margin-bottom: 30px
+ }
+
+ #clients .client-logo {
+     padding: 64px;
+     display: -webkit-box;
+     display: -webkit-flex;
+     display: -ms-flexbox;
+     display: flex;
+     -webkit-box-pack: center;
+     -webkit-justify-content: center;
+     -ms-flex-pack: center;
+     justify-content: center;
+     -webkit-box-align: center;
+     -webkit-align-items: center;
+     -ms-flex-align: center;
+     align-items: center;
+/*     border-right: 1px solid #d6eaff;
+     border-bottom: 1px solid #d6eaff;*/
+     overflow: hidden;
+     background: #fff;
+     height: 160px
+ }
+
+ #clients img {
+     transition: all 0.4s ease-in-out
+ }
+
+  #whatis {
+     padding: 60px 0
+ }
+
+#tools {
+     padding: 30px 0
+}
+
+#tools .tool {
+     padding: 10px 10px 10px 10px;
+     display: -webkit-box;
+     display: -webkit-flex;
+     display: -ms-flexbox;
+     display: flex;
+     -webkit-box-pack: center;
+     -webkit-justify-content: center;
+     -ms-flex-pack: center;
+     justify-content: center;
+     -webkit-box-align: center;
+     -webkit-align-items: center;
+     -ms-flex-align: center;
+     align-items: center;
+/*     border-right: 1px solid #d6eaff;
+     border-bottom: 1px solid #d6eaff;*/
+     overflow: hidden;
+     background: #fff;
+     height: 160px
+}
+
+#tools .tool img {
+	max-height: 70px;
+}
+
+ /* Organisation */
+.logo{
+
+
+     overflow: hidden;
+     background: #fff;
+     margin-bottom: 30px;
+     
+}
+
+.logo img {
+	max-height: 120px;
+}
+
+/* Score */
+.grad {
+  height: 40px;
+  margin-bottom:  10px;
+  width: 100%;
+  background-image: linear-gradient(to right, #ED5564, #FFCE54, #A0D568);
+  position: relative;
+}
+
+.scoreboard {
+	margin:  50px;
+}
+
+.scoreboard .total .grad  {
+	height: 50px;
+}
+.scoreboard .total {
+	margin-bottom: 30px;
+}
+.scoreboard .total .indicator {
+}
+
+.scoreboard .indicator {
+	background-image: url('/assets/spoelkeuken/img/dishbrush.png');
+	top: -5px;
+    background-repeat: no-repeat;
+	width:  60px;
+	height: 60px;
+	position: absolute;
+}
+.scoreboard .caption {
+	font-style: italic;
+	align-items:center;
+	display: flex;
+}
+.scoreboard .total .caption {
+	font-weight: bolder;
+}
+
+
+.score-0 { left:  calc(0% - 30px) }
+.score-1 { left:  calc(10% - 30px) }
+.score-2 { left:  calc(20% - 30px) }
+.score-3 { left:  calc(30% - 30px) }
+.score-4 { left:  calc(40% - 30px) }
+.score-5 { left:  calc(50% - 30px) }
+.score-6 { left:  calc(60% - 30px) }
+.score-7 { left:  calc(70% - 30px) }
+.score-8 { left:  calc(80% - 30px) }
+.score-9 { left:  calc(90% - 30px) }
+.score-10 { left:  calc(100% - 30px) }
+
+
+
+#toolboard .clients-wrap {
+     border:none;
+     margin-bottom: 100px
+ }
+
+#toolboard .client-logo {
+     padding: 50px 50px 20px 50px;
+     display: -webkit-box;
+     display: -webkit-flex;
+     display: -ms-flexbox;
+     display: flex;
+     -webkit-box-pack: center;
+     -webkit-justify-content: center;
+     -ms-flex-pack: center;
+     justify-content: center;
+     -webkit-box-align: center;
+     -webkit-align-items: center;
+     -ms-flex-align: center;
+     align-items: center;
+/*     border-right: 1px solid #d6eaff;
+     border-bottom: 1px solid #d6eaff;*/
+     overflow: hidden;
+     background: #fff;
+     height: 160px
+ }
+
+@media (max-width: 575.98px) { 
+
+	#toolboard .client-logo {
+     padding: 15px 15px 0 15px;
+    }
+}
+
+#toolboard img {
+     transition: all 0.4s ease-in-out
+ }
+
+ #toolboard .tool-name {
+ 	text-align: center;
+ 	font-weight: bold;
+ 	font-size: smaller;
+ }

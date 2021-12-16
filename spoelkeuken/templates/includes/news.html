@@ -1,0 +1,23 @@
+{% block news %}
+{% if stories %}
+<section id="news" class="section-bg">
+    <div class="container ">
+        <div class="section-header">
+            <h3>{{content.homepage_stories_title}}</h3>
+            <div class="body col-md-8">{{content.homepage_stories_body}}</div>
+        </div>
+        <div class="news-list row d-flex justify-content-center">
+		 
+		  <ul class="news-list col-md-6 text-center">
+		  	{% for story in stories %}
+                <li>
+						<a href="{{story.url}}">{{story.title}}</a>
+				</li>
+            {% endfor %}
+			</ul>
+		</div>
+
+    </div>
+</section>
+{% endif %}
+{% endblock %}

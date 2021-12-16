@@ -3,7 +3,7 @@
  "charts": [],
  "creation": "2021-11-01 19:50:46.612567",
  "developer_mode_only": 0,
- "disable_user_customization": 0,
+ "disable_user_customization": 1,
  "docstatus": 0,
  "doctype": "Workspace",
  "extends_another_page": 0,
@@ -39,9 +39,35 @@
    "link_type": "DocType",
    "onboard": 0,
    "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Content",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Stories",
+   "link_to": "Story",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Website Content",
+   "link_to": "Website Content",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
   }
  ],
- "modified": "2021-11-25 16:46:19.733761",
+ "modified": "2021-12-15 22:01:29.566379",
  "modified_by": "Administrator",
  "module": "Spoelkeuken",
  "name": "Spoelkeuken",

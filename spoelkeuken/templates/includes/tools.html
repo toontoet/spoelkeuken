@@ -1,0 +1,19 @@
+{% if tools %}
+<section id="tools" class="section-bg">
+    <div class="container ">
+        <div class="section-header">
+            <h3>{{content.homepage_tools_title}}</h3>
+            <div class="body col-md-8">{{content.homepage_tools_body}}</div>
+        </div>
+
+        <div class="row">
+            {% for tool in tools %}
+            <div class="tool col-lg-2 col-md-4 col-6">
+                <a href="/tool/{{tool.name}}"><img src="{{tool.logo}}" class="img-fluid" alt="{{tool.name}} logo"></a>
+            </div>
+            {% endfor %}
+            
+        </div>
+    </div>
+</section>
+{% endif %}

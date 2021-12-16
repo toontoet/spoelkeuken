@@ -18,7 +18,7 @@
  "is_standard": 1,
  "login_required": 1,
  "max_attachment_size": 0,
- "modified": "2021-11-25 16:57:30.965446",
+ "modified": "2021-12-01 13:33:18.216989",
  "modified_by": "Administrator",
  "module": "Spoelkeuken",
  "name": "nieuwe-scan",
@@ -32,7 +32,7 @@
  "show_sidebar": 0,
  "sidebar_items": [],
  "success_url": "/scans/new-ok",
- "title": "New Scan",
+ "title": "Create Scan",
  "web_form_fields": [
   {
    "allow_read_on_all_link_options": 0,
@@ -48,8 +48,8 @@
   },
   {
    "allow_read_on_all_link_options": 0,
-   "fieldname": "descrioption",
-   "fieldtype": "Text",
+   "fieldname": "description",
+   "fieldtype": "Data",
    "hidden": 0,
    "label": "Beschrijf waar je je op wilt richten met deze scan",
    "max_length": 0,
