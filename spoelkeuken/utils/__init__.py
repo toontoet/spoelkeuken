@@ -3,8 +3,9 @@ import frappe
 import statistics
 
 def current_organisation():
-	p = frappe.db.get_value("User", frappe.session.user , ["organisation"], as_dict=True)
-	return p.organisation
+	return None
+	#p = frappe.db.get_value("User", frappe.session.user , ["organisation"], as_dict=True)
+	#return p.organisation
 
 
 def calc_score(scantool,  fields):
@@ -64,7 +65,7 @@ def update_orgs_by_tool(tool):
 	for org in orgs:
 		update_org_score(org.organisation)
 
-		
+
 
 def update_org_score(org):
 
