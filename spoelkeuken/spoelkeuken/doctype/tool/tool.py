@@ -11,8 +11,9 @@ class Tool(Document):
 
 		olddoc = self.get_doc_before_save()
 
-		if self.status != olddoc.status:
-			if self.status == 'Active':
-				spoelkeuken.utils.update_tool_score(self.name)
-			spoelkeuken.utils.update_orgs_by_tool(self.name)
+		if olddoc != None:
+			if self.status != olddoc.status:
+				if self.status == 'Active':
+					spoelkeuken.utils.update_tool_score(self.name)
+				spoelkeuken.utils.update_orgs_by_tool(self.name)
 
