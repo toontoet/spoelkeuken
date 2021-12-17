@@ -4,6 +4,7 @@ import frappe
 import spoelkeuken.utils
 
 def scan_query(user):
+    return None
     if not user:
         user = frappe.session.user
     # todos that belong to user or assigned by user
