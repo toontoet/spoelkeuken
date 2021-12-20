@@ -62,3 +62,5 @@ class Scans(Document):
         if self.status != 'New':
             spoelkeuken.utils.update_org_score(self.organisation)
             spoelkeuken.utils.update_tools()
+
+        frappe.website.render.clear_cache()

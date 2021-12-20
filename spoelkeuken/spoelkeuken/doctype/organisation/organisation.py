@@ -1,7 +1,7 @@
 # Copyright (c) 2021, PublicSpaces and contributors
 # For license information, please see license.txt
 
-# import frappe
+import frappe
 from frappe.model.document import Document
 import spoelkeuken.utils
 
@@ -13,4 +13,5 @@ class Organisation(Document):
 			if self.status != olddoc.status:
 				if self.status == 'Active':
 					spoelkeuken.utils.update_org_score(self.name)
+		frappe.website.render.clear_cache()
 

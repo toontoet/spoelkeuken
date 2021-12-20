@@ -11,7 +11,6 @@
   "date",
   "title",
   "description",
-  "inventory",
   "tools",
   "score",
   "score_open",
@@ -44,17 +43,9 @@
    "reqd": 1
   },
   {
-   "description": "Maak een lijst van alle tools die je in deze scan wilt onderzoeken. Zet iedere tool op een nieuwe regel. Je kunt zoveel tools toetsen als je wilt. Het is ook mogelijk om later nog extra tools toe te voegen.",
-   "fieldname": "inventory",
-   "fieldtype": "Long Text",
-   "label": "Inventarisatie",
-   "set_only_once": 1
-  },
-  {
    "fieldname": "description",
    "fieldtype": "Long Text",
-   "label": "Beschrijf waar je je op wilt richten met deze scan",
-   "reqd": 1
+   "label": "Beschrijf waar je je op wilt richten met deze scan"
   },
   {
    "fieldname": "tools",
@@ -111,13 +102,8 @@
    "read_only": 1
   }
  ],
- "links": [
-  {
-   "link_doctype": "ToolToets",
-   "link_fieldname": "scan"
-  }
- ],
- "modified": "2021-12-15 15:09:36.202202",
+ "links": [],
+ "modified": "2021-12-20 14:06:19.469130",
  "modified_by": "Administrator",
  "module": "Spoelkeuken",
  "name": "Scans",

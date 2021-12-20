@@ -1,10 +1,8 @@
 # Copyright (c) 2021, PublicSpaces and contributors
 # For license information, please see license.txt
 
-import frappe
+# import frappe
 from frappe.model.document import Document
 
-class Story(Document):
-	def on_change(self):
-
-		frappe.website.render.clear_cache()
+class ToolCategory(Document):
+	pass

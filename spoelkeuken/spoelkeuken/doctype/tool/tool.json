@@ -9,8 +9,10 @@
  "field_order": [
   "url",
   "logo",
+  "categories",
   "description",
-   "score",
+  "scores_section",
+  "score",
   "score_open",
   "score_transparent",
   "score_accountable",
@@ -81,12 +83,23 @@
    "in_preview": 1,
    "label": "Score",
    "read_only": 1
+  },
+  {
+   "fieldname": "categories",
+   "fieldtype": "Table MultiSelect",
+   "label": "Categories",
+   "options": "ToolCategory"
+  },
+  {
+   "fieldname": "scores_section",
+   "fieldtype": "Section Break",
+   "label": "Scores"
   }
  ],
  "image_field": "logo",
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2021-11-16 15:58:30.387205",
+ "modified": "2021-12-20 15:14:37.820670",
  "modified_by": "Administrator",
  "module": "Spoelkeuken",
  "name": "Tool",

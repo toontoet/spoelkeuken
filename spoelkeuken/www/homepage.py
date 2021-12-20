@@ -5,6 +5,8 @@ import spoelkeuken.utils
 def get_context(context):
 	context.content = frappe.get_doc("Website Content")
 
+	context.title = "De PublicSpaces Spoelkeuken";
+
 	context.stories = frappe.db.get_all("Story",
 			filters={
 				'homepage': True,

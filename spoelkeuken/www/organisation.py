@@ -23,6 +23,7 @@ def get_context(context):
 	else:
 		context.org = orgs[0]
 
+	context.title = context.org.name;
 
 	values = {'org': frappe.form_dict.name}
 	data = frappe.db.sql("""

@@ -56,7 +56,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2021-12-15 22:30:53.267160",
+ "modified": "2021-12-20 13:53:15.344736",
  "modified_by": "Administrator",
  "module": "Spoelkeuken",
  "name": "Story",
@@ -71,6 +71,18 @@
    "read": 1,
    "report": 1,
    "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Spoelkeuken Manager",
    "share": 1,
    "write": 1
   }

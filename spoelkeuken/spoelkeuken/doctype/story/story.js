@@ -2,7 +2,9 @@
 // For license information, please see license.txt
 
 frappe.ui.form.on('Story', {
-	// refresh: function(frm) {
 
-	// }
+	refresh(frm) {
+		// your code here
+		if (!frm.doc.date) frm.set_value('date', frappe.datetime.now_datetime())
+	}
 });

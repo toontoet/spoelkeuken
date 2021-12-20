@@ -23,6 +23,7 @@ def get_context(context):
 	else:
 		context.tool = tools[0]
 
+	context.title = context.tool.name;
 
 	values = {'tool': frappe.form_dict.name}
 	data = frappe.db.sql("""
