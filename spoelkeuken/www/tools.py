@@ -15,6 +15,8 @@ def get_context(context):
 
 		context.category = frappe.get_doc("Category",frappe.form_dict.category)
 
+		context.title =  "Tools: " + frappe.form_dict.category;
+
 		values = {'category': frappe.form_dict.category}
 		tools = frappe.db.sql("""
 		    SELECT
@@ -27,6 +29,8 @@ def get_context(context):
 		""", values=values, as_dict=1)
 
 	else:
+
+		context.title =  "Alle tools"
 
 		context.category = False
 
