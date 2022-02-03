@@ -310,21 +310,54 @@
     text-align: center;
 }
 
-#toolboard .bullit {
+.bullit {
     display: block;
     width: 30px;
     height: 30px;
-    margin: 0 auto;
     border-radius: 15px;
 }
 
-#toolboard img.rowlogo {
+.bullit-caption {
+    display:  flex; 
+    font-weight: bold;
+}
+
+#toolboard .bullit {
+      margin: 0 auto;
+
+}
+ img.rowlogo {
   display: block;
   max-width:70px;
   max-height:70px;
   width: auto;
   height: auto;
 }
+.tools-overview .header {
+    height:  100px;
+}
+
+.scores {
+    display: flex;
+    font-size: smaller;
+    margin-left: 0 !important;
+}
+
+.scores .score {
+    display: flex;
+     margin-bottom: 5px;
+}
+.scores .bullit {
+
+    width: 20px;
+    height: 20px;
+    border-radius: 20px;
+
+}
+.scores div {
+    margin-right: 10px;
+}
+
 @media (max-width: 575.98px) { 
 
 	#toolboard .client-logo {

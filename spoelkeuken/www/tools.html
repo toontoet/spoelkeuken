@@ -1,0 +1,69 @@
+<div class="tools-overview container pt-md-14">
+
+
+
+
+
+
+  <div class="row">
+  	<div class="col-12 col-lg-2  ">
+  		
+  		<ul class="list-group list-group-flush">
+  			<li class="list-group-item"><a href="/tools">Alle tools </a></li>
+  			{% for cat in categories %}
+  			<li class="list-group-item"><a href="/tools/{{cat.category}}">{{cat.category}}</a> ({{cat.count}})</li>
+  			{% endfor %}
+  		</ul>
+
+
+    </div>
+    <div class="tools-list col-12 col-lg-10">
+    	{%if category %}
+        	<h1 class="title fw-light mb-5">Tools in de categorie: {{category.name}}</h1>
+        	{% if category.description%}<p class="mb-5">{{category.description|escape}}</p>{%endif%}
+        	{%else%}
+        	<h1 class="title fw-light">Tools</h1>
+        	{%endif%}
+    	{% for tool in tools %}
+    	<div class="card mb-5" >
+		  
+		  <div class="card-body">
+		  	<div class="row">
+		  		<div class="tool col-2" >
+				  	
+		                <a href="/tool/{{tool.name}}"><img src="{{tool.logo}}" class="img-fluid" alt="{{tool.name}} logo"></a>
+		            
+	        	</div>
+	        	<div class="col-10">
+				    <h5 class="card-title"><a href="/tool/{{tool.name}}">{{tool.name}}</a></h5>
+				    <p class="card-text">{%if tool.description %}{{tool.description|striptags|truncate(300, True)}}{% endif %}</p>
+				    <div class="scores row">
+				    	
+				    	<div class="score"><div alt="Score: {{tool.score_open}}" class="bullit color-2"></div><div class="bullit-caption">Totaal  </div></div>
+				    	<div class="score"><div alt="Score: {{tool.score_open}}" class="bullit color-2"></div><div class="bullit-caption">Open  </div></div>
+				    	<div class="score"><div alt="Score: {{tool.score_open}}" class="bullit color-2"></div><div class="bullit-caption">Transparant  </div></div>
+				    
+				    	<div class="score"><div alt="Score: {{tool.score_open}}" class="bullit color-2"></div><div class="bullit-caption">Aansprakelijk  </div></div>
+				    	<div class="score"><div alt="Score: {{tool.score_open}}" class="bullit color-2"></div><div class="bullit-caption">Souverein  </div></div>
+				    	<div class="score"><div alt="Score: {{tool.score_open}}" class="bullit color-2"></div><div class="bullit-caption">Gebruikergericht  </div>
+				    </div>
+				    </div>
+			    </div>
+			</div>
+		  </div>
+		</div>
+		{% endfor %}
+		
+
+
+
+
+		</div>
+
+  	</div>
+
+
+
+	
+
+</div>

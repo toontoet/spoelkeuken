@@ -14,6 +14,7 @@ website_route_rules = [
     {"from_route": "/scans/details/<name>", "to_route": "scans/details"},
     {"from_route": "/organisation/<name>", "to_route": "organisation"},
     {"from_route": "/tool/<name>", "to_route": "tool"},
+     {"from_route": "/tools/<category>", "to_route": "tools"},
 ]
 
 # website_context = {
