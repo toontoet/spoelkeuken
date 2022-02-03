@@ -23,6 +23,8 @@
   "homepage_participants_title",
   "homepage_participants_body",
   "no_result",
+  "explainer_tool_score",
+  "explainer_tool_link",
   "explainer_organisation_score",
   "explainer_organisation_link",
   "explainer_open",
@@ -151,12 +153,22 @@
    "fieldname": "explainer_organisation_link",
    "fieldtype": "Data",
    "label": "Score Organisation Link"
+  },
+  {
+   "fieldname": "explainer_tool_score",
+   "fieldtype": "Text Editor",
+   "label": "Score Tool Explainer"
+  },
+  {
+   "fieldname": "explainer_tool_link",
+   "fieldtype": "Data",
+   "label": "Score Tool Link"
   }
  ],
  "index_web_pages_for_search": 1,
  "issingle": 1,
  "links": [],
- "modified": "2022-02-03 13:55:07.795914",
+ "modified": "2022-02-03 15:13:14.157660",
  "modified_by": "Administrator",
  "module": "Spoelkeuken",
  "name": "Website Content",

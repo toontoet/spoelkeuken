@@ -65,7 +65,14 @@
 			</div>
 			<div class="row">
 				<div class="caption col-12 col-md-2">
-					Open
+					<a  tabindex="0" 
+						role="button" 
+						class="popoverExplainer" 
+						data-toggle="popover" 
+						data-html="true"
+						data-content="{{content.explainer_open|escape}}">
+						<span>Open</span> <i class="bi bi-info-circle"></i>
+					</a>
 				</div>
 				<div class="col-12 col-md-8">
 					<div class="grad">
@@ -77,7 +84,14 @@
 			</div>
 			<div class="row">
 				<div class="caption col-12 col-md-2">
-					Transparant
+					<a  tabindex="1" 
+						role="button" 
+						class="popoverExplainer" 
+						data-toggle="popover" 
+						data-html="true"
+						data-content="{{content.explainer_transparent|escape}}">
+						<span>Transparant</span> <i class="bi bi-info-circle"></i>
+					</a>
 				</div>
 				<div class="col-12 col-md-8">
 					<div class="grad">
@@ -89,7 +103,14 @@
 			</div>
 			<div class="row">
 				<div class="caption col-12 col-md-2">
-					Aansprakelijk
+					<a  tabindex="2" 
+						role="button" 
+						class="popoverExplainer" 
+						data-toggle="popover" 
+						data-html="true"
+						data-content="{{content.explainer_accountable|escape}}">
+						<span>Aansprakelijk</span> <i class="bi bi-info-circle"></i>
+					</a>
 				</div>
 				<div class="col-12 col-md-8">
 					<div class="grad">
@@ -101,7 +122,14 @@
 			</div>
 			<div class="row">
 				<div class="caption col-12 col-md-2">
-					Souverein
+					<a  tabindex="3" 
+						role="button" 
+						class="popoverExplainer" 
+						data-toggle="popover" 
+						data-html="true"
+						data-content="{{content.explainer_souvereign|escape}}">
+						<span>Souverein</span> <i class="bi bi-info-circle"></i>
+					</a>
 				</div>
 				<div class="col-12 col-md-8">
 					<div class="grad">
@@ -113,7 +141,14 @@
 			</div>
 			<div class="row">
 				<div class="caption col-12 col-md-2">
-					Gebruikergericht
+					<a  tabindex="4" 
+						role="button" 
+						class="popoverExplainer" 
+						data-toggle="popover" 
+						data-html="true"
+						data-content="{{content.explainer_usercentric|escape}}">
+						<span>Gebruikergericht</span> <i class="bi bi-info-circle"></i>
+					</a>
 				</div>
 				<div class="col-12 col-md-8">
 					<div class="grad">
@@ -123,6 +158,25 @@
 						</div>
 				</div>
 			</div>
+			<div class="row">
+				<div class="caption col-12 col-md-2">
+					
+				</div>
+				<div class="col-12 col-md-8">
+					<div class="explainer">
+						<a href="{{content.explainer_tool_link}}" tabindex="10" class="btn btn-sm" type="button" data-toggle="collapse" data-target="#collapseExplainer" aria-expanded="false" aria-controls="collapseExplainer">
+						    Hoe komt deze score tot stand?
+						</a>
+								
+						<div class="collapse" id="collapseExplainer">
+							<div class="card card-body">
+								{{content.explainer_tool_score}}
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
 		</div>
 
     	</div>
@@ -134,19 +188,42 @@
        	<div class="col-12 col-md-2 text-md-right">
        		<strong>organisaties</strong>
        	</div>
-       	<div class="col-12 col-md-10">
+       	<div class="col-12 col-md-8">
         	<p class="">De volgende organisaties hebben deze tool door de Spoelkeuken gehaald:</p>
-        	<div id="toolboard">
-        	<div class="row no-gutters clients-wrap clearfix wow fadeInUp" style="visibility: visible; animation-name: fadeInUp;">
-	            {% for org in orgs %}
-	            <div class="col-lg-3 col-md-4 col-xs-6">
-	                <div class="client-logo"><a href="/organisation/{{org.name}}"><img src="{{org.logo}}" class="img-fluid" alt=""></a></div>
-	                <div class="tool-name">{{org.name}}</div>
+        	
 
-	            </div>
-	            {% endfor %}
+    		<div id="toolboard">
+        	<div class="table-responsive">
+        		<table class="table">
+				  <thead>
+				    <tr>
+				      <th scope="col" width="100"></th>
+				      <th scope="col" class="left">Organisatie</th>
+				      <th scope="col" ><span class="vertical">Totaal</span></th>
+				      <th scope="col" ><span class="vertical">Open</span></th>
+				      <th scope="col" ><span class="vertical">Transparant</span></th>
+				      <th scope="col" ><span class="vertical">Aansprakelijk</span></th>
+				      <th scope="col" ><span class="vertical">Souverein</span></th>
+				      <th scope="col" ><span class="vertical">Gebruikergericht</span></th>
+				    </tr>
+				  </thead>
+				  <tbody>
+	            	{% for org in orgs %}
+	                <tr>
+				      <td ><a href="/organisation/{{org.name}}"><img class="rowlogo"  src="{{org.logo}}"  alt="Logo van {{org.name}}"></a></td>
+				      <td><a href="/organisation/{{org.name}}">{{org.name}}</a></td>
+				      <td class="score"><span role="img" alt="Score: {{org.score}}" class="bullit color-{{org.score_class}}"></span></td>
+				      <td class="score"><span role="img" alt="Score: {{org.score_open}}" class="bullit color-{{org.score_open_class}}"></span></td>
+				      <td class="score"><span role="img" alt="Score: {{org.score_transparent}}" class="bullit color-{{org.score_transparent_class}}"></span></td>
+				      <td class="score"><span role="img" alt="Score: {{org.score_accountable}}" class="bullit color-{{org.score_accountable_class}}"></span></td>
+				      <td class="score"><span role="img" alt="Score: {{org.score_souvereign}}" class="bullit color-{{org.score_souvereign_class}}"></span></td>
+				      <td class="score"><span role="img" alt="Score: {{org.score_accountable}}" class="bullit color-{{org.score_accountable_class}}"></span></td>
+				    </tr>
+	            	{% endfor %}
+	              </tbody>
+				</table>
 	        </div>
-    	</div>
+    		</div>
     	
 
 
