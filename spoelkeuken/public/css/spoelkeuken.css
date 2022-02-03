@@ -246,6 +246,7 @@
 .score-10 { left:  calc(100% - 30px) }
 
 
+.color--1 { background-color: #FFFFFF; border: solid 1px #DDDDDD }
 .color-0 { background-color: #ED5563; }
 .color-1 { background-color: #F17260; }
 .color-2 { background-color: #F5895D; }
