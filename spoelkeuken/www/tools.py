@@ -44,30 +44,6 @@ def get_context(context):
 
 	context.tools = map(display_scores, tools)
 
-	#context.title = context.tool.name;
-
-	# values = {'tool': frappe.form_dict.name}
-	# data = frappe.db.sql("""
-	#     SELECT
-	#         st.score,
-	#         st.score_open,
-	#         st.score_transparent,
-	#         st.score_accountable,
-	#         st.score_souvereign,
-	#         st.score_usercentric,
-	#         o.logo,
-	#      	o.name
-	#     FROM `tabScanTool` st
-	#         LEFT JOIN `tabScans` s
-	#         ON st.parent = s.name
-	#         LEFT JOIN `tabOrganisation` o
-	#         ON s.organisation = o.name
-	#     WHERE s.status = 'Active' AND o.status = 'Active' AND st.tool = %(tool)s
-	# """, values=values, as_dict=1)
-
-	# context.orgs = map(display_scores, data)
-
-
 	categories = frappe.db.sql("""
 	    SELECT
 	        tc.category, COUNT(*) as count

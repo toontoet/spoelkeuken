@@ -19,7 +19,8 @@
         	<h1 class="title fw-light mb-5">Tools in de categorie: {{category.name}}</h1>
         	{% if category.description%}<p class="mb-5">{{category.description|escape}}</p>{%endif%}
         	{%else%}
-        	<h1 class="title fw-light mb-5">Tools</h1>
+        	<h1 class="title fw-light mb-5">{{content.tools_title}}</h1>
+        	{% if content.tools_intro%}<p class="mb-5">{{content.tools_intro}}</p>{%endif%}
         	{%endif%}
     	{% for tool in tools %}
     	<div class="card mb-5" >
