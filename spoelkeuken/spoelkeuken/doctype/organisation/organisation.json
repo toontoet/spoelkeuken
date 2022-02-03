@@ -9,6 +9,7 @@
  "field_order": [
   "url",
   "logo",
+  "industries",
   "description",
   "plan",
   "amended_from",
@@ -102,12 +103,18 @@
   {
    "fieldname": "section_break_6",
    "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "industries",
+   "fieldtype": "Table MultiSelect",
+   "label": "Industries",
+   "options": "OrganisationIndustry"
   }
  ],
  "image_field": "logo",
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2021-12-20 13:54:26.687429",
+ "modified": "2022-02-03 15:36:35.268723",
  "modified_by": "Administrator",
  "module": "Spoelkeuken",
  "name": "Organisation",
