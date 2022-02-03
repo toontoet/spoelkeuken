@@ -62,16 +62,33 @@ def get_context(context):
 	context.stories = stories
 
 def display_scores(row):
+
+	row.score_class = class_score(row.score)
+	row.score_open_class = class_score(row.score_open)
+	row.score_transparent_class = class_score(row.score_transparent)
+	row.score_accountable_class = class_score(row.score_accountable)
+	row.score_souvereign_class = class_score(row.score_souvereign)
+	row.score_usercentric_class = class_score(row.score_usercentric)
+
 	row.score = display_score(row.score)
 	row.score_open = display_score(row.score_open)
 	row.score_transparent = display_score(row.score_transparent)
 	row.score_accountable = display_score(row.score_accountable)
 	row.score_souvereign = display_score(row.score_souvereign)
 	row.score_usercentric = display_score(row.score_usercentric)
+
+	
 	return row
+
 
 def display_score(score):
 	if score < 0:
 		return 'n.v.t.'
 	else:
 		return str(int(round(score*100,0))) +'%'
+
+def class_score(score):
+	if score < 0:
+		return -1
+	else:
+		return int(round(score*10))

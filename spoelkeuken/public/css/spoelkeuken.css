@@ -246,6 +246,19 @@
 .score-10 { left:  calc(100% - 30px) }
 
 
+.color-0 { background-color: #ED5563; }
+.color-1 { background-color: #F17260; }
+.color-2 { background-color: #F5895D; }
+.color-3 { background-color: #F8A05B; }
+.color-4 { background-color: #FBB757; }
+.color-5 { background-color: #FECE53; }
+.color-6 { background-color: #EDCF59; }
+.color-7 { background-color: #DAD15C; }
+.color-8 { background-color: #C8D260; }
+.color-9 { background-color: #B8D363; }
+.color-10 { background-color: #A0D568; }
+
+
 
 #toolboard  {
      border:none;
@@ -291,11 +304,27 @@
 #toolboard td {
     vertical-align: middle;
     text-align: left;
+    height: 80px;
 }
 #toolboard td.score {
     text-align: center;
 }
 
+#toolboard .bullit {
+    display: block;
+    width: 30px;
+    height: 30px;
+    margin: 0 auto;
+    border-radius: 15px;
+}
+
+#toolboard img.rowlogo {
+  display: block;
+  max-width:70px;
+  max-height:70px;
+  width: auto;
+  height: auto;
+}
 @media (max-width: 575.98px) { 
 
 	#toolboard .client-logo {

@@ -188,7 +188,7 @@
        	<div class="col-12 col-md-2 text-md-right">
        		<strong>tools</strong>
        	</div>
-       	<div class="col-12 col-md-10">
+       	<div class="col-12 col-md-8">
         	<p class="">In het onderzoek zijn de volgende tools getoetst aan de 5 publieke waarden van PublicPaces:</p>
         	<div id="toolboard">
         	<div class="table-responsive">
@@ -212,21 +212,15 @@
 
 	            {% for tool in tools %}
 	            <tr>
-				      <td ><a href="/tool/{{tool.name}}"><img width="100" src="{{tool.logo}}"  alt="Logo van {{tool.name}}"></a></td>
+				      <td ><a href="/tool/{{tool.name}}"><img class="rowlogo"  src="{{tool.logo}}"  alt="Logo van {{tool.name}}"></a></td>
 				      <td><a href="/tool/{{tool.name}}">{{tool.name}}</a></td>
-				      <td class="score">{{tool.score}}</td>
-				      <td class="score">{{tool.score_open}}</td>
-				      <td class="score">{{tool.score_transparent}}</td>
-				      <td class="score">{{tool.score_accountable}}</td>
-				      <td class="score">{{tool.score_souvereign}}</td>
-				      <td class="score">{{tool.score_accountable}}</td>
-				      
+				      <td class="score"><span role="img" alt="Score: {{tool.score}}" class="bullit color-{{tool.score_class}}"></span></td>
+				      <td class="score"><span role="img" alt="Score: {{tool.score_open}}" class="bullit color-{{tool.score_class}}"></span></td>
+				      <td class="score"><span role="img" alt="Score: {{tool.score_transparent}}" class="bullit color-{{tool.score_transparent_class}}"></span></td>
+				      <td class="score"><span role="img" alt="Score: {{tool.score_accountable}}" class="bullit color-{{tool.score_accountable_class}}"></span></td>
+				      <td class="score"><span role="img" alt="Score: {{tool.score_souvereign}}" class="bullit color-{{tool.score_souvereign_class}}"></span></td>
+				      <td class="score"><span role="img" alt="Score: {{tool.score_accountable}}" class="bullit color-{{tool.score_accountable_class}}"></span></td>
 				    </tr>
-	            <!-- <div class="col-lg-3 col-md-4 col-xs-6">
-	                <div class="client-logo"><a href="/tool/{{tool.name}}"><img src="{{tool.logo}}" class="img-fluid" alt=""></a></div>
-	                <div class="tool-name">{{tool.name}}</div>
-
-	            </div> -->
 	            {% endfor %}
 	              </tbody>
 				</table>
