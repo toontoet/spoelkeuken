@@ -31,8 +31,8 @@ brand_html = '<div>Spoelkeuken</div>'
 # app_include_js = "/assets/spoelkeuken/js/spoelkeuken.js"
 
 # include js, css files in header of web template
-web_include_css = "/assets/spoelkeuken/css/spoelkeuken.css"
-# web_include_js = "/assets/spoelkeuken/js/spoelkeuken.js"
+web_include_css = [ "/assets/spoelkeuken/css/spoelkeuken.css", "/assets/spoelkeuken/css/bootstrap-icons.css"]
+web_include_js = "/assets/spoelkeuken/js/popper.min.js"
 
 # include custom scss in every website theme (without file extension ".scss")
 website_theme_scss = "public/scss/website"

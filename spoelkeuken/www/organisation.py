@@ -29,6 +29,11 @@ def get_context(context):
 	data = frappe.db.sql("""
 	    SELECT
 	        st.score,
+	        st.score_open,
+	        st.score_transparent,
+	        st.score_accountable,
+	        st.score_souvereign,
+	        st.score_usercentric,
 	        t.logo,
 	     	t.name
 	    FROM `tabScanTool` st
@@ -39,7 +44,8 @@ def get_context(context):
 	    WHERE s.status = 'Active' AND t.status = 'Active' AND s.organisation = %(org)s
 	""", values=values, as_dict=1)
 
-	context.tools = data
+	
+	context.tools = map(display_scores, data)
 
 
 	stories = frappe.db.sql("""
@@ -55,4 +61,17 @@ def get_context(context):
 	
 	context.stories = stories
 
+def display_scores(row):
+	row.score = display_score(row.score)
+	row.score_open = display_score(row.score_open)
+	row.score_transparent = display_score(row.score_transparent)
+	row.score_accountable = display_score(row.score_accountable)
+	row.score_souvereign = display_score(row.score_souvereign)
+	row.score_usercentric = display_score(row.score_usercentric)
+	return row
 
+def display_score(score):
+	if score < 0:
+		return 'n.v.t.'
+	else:
+		return str(int(round(score*100,0))) +'%'

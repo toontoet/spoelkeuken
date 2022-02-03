@@ -111,13 +111,47 @@
      transition: all 0.4s ease-in-out
  }
 
-  #whatis {
-     padding: 60px 0
- }
+#whatis {
+ padding: 60px 0
+}
+
+.explainer {
+     text-align: center;
+}
+.explainer a {
+    font-size: smaller  ;
+     color:  #999999
+}
+.explainer a:focus {
+    font-size: smaller  ;
+     color:  #000000;
+}
+#collapseExplainer .card-body {
+    text-align: left;
+    margin-top:  20px;
+    font-size: smaller;
+}
+#collapseExplainer .card {
+    border-radius: 5px;
+}
+
+.popoverExplainer {
+    color:  red;
+    cursor:  pointer;
+}
+.popoverExplainer span {
+    border-bottom: 1px dashed #999999;
+}
+.popoverExplainer i.bi {
+    color: #999999;
+}
+
+
 
 #tools {
      padding: 30px 0
 }
+
 
 #tools .tool {
      padding: 10px 10px 10px 10px;
@@ -192,6 +226,7 @@
 	font-style: italic;
 	align-items:center;
 	display: flex;
+    font-size: smaller;
 }
 .scoreboard .total .caption {
 	font-weight: bolder;
@@ -212,7 +247,7 @@
 
 
 
-#toolboard .clients-wrap {
+#toolboard  {
      border:none;
      margin-bottom: 100px
  }
@@ -237,6 +272,29 @@
      background: #fff;
      height: 160px
  }
+
+
+ #toolboard th[scope="col"] {
+    
+    text-align: center;
+    border-top: none
+}
+#toolboard th[scope="col"].left {
+    
+    text-align: left;
+}
+
+#toolboard .vertical {
+    writing-mode: sideways-lr;
+    font-size: smaller;
+}
+#toolboard td {
+    vertical-align: middle;
+    text-align: left;
+}
+#toolboard td.score {
+    text-align: center;
+}
 
 @media (max-width: 575.98px) { 
 

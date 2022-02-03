@@ -65,7 +65,14 @@
 			</div>
 			<div class="row">
 				<div class="caption col-12 col-md-2">
-					Open
+					<a  tabindex="0" 
+						role="button" 
+						class="popoverExplainer" 
+						data-toggle="popover" 
+						data-html="true"
+						data-content="{{content.explainer_open|escape}}">
+						<span>Open</span> <i class="bi bi-info-circle"></i>
+					</a>
 				</div>
 				<div class="col-12 col-md-8">
 					<div class="grad">
@@ -77,7 +84,14 @@
 			</div>
 			<div class="row">
 				<div class="caption col-12 col-md-2">
-					Transparant
+					<a  tabindex="1" 
+						role="button" 
+						class="popoverExplainer" 
+						data-toggle="popover" 
+						data-html="true"
+						data-content="{{content.explainer_transparent|escape}}">
+						<span>Transparant</span> <i class="bi bi-info-circle"></i>
+					</a>
 				</div>
 				<div class="col-12 col-md-8">
 					<div class="grad">
@@ -89,7 +103,14 @@
 			</div>
 			<div class="row">
 				<div class="caption col-12 col-md-2">
-					Aansprakelijk
+					<a  tabindex="2" 
+						role="button" 
+						class="popoverExplainer" 
+						data-toggle="popover" 
+						data-html="true"
+						data-content="{{content.explainer_accountable|escape}}">
+						<span>Aansprakelijk</span> <i class="bi bi-info-circle"></i>
+					</a>
 				</div>
 				<div class="col-12 col-md-8">
 					<div class="grad">
@@ -101,7 +122,14 @@
 			</div>
 			<div class="row">
 				<div class="caption col-12 col-md-2">
-					Souverein
+					<a  tabindex="3" 
+						role="button" 
+						class="popoverExplainer" 
+						data-toggle="popover" 
+						data-html="true"
+						data-content="{{content.explainer_souvereign|escape}}">
+						<span>Souverein</span> <i class="bi bi-info-circle"></i>
+					</a>
 				</div>
 				<div class="col-12 col-md-8">
 					<div class="grad">
@@ -113,7 +141,14 @@
 			</div>
 			<div class="row">
 				<div class="caption col-12 col-md-2">
-					Gebruikergericht
+					<a  tabindex="4" 
+						role="button" 
+						class="popoverExplainer" 
+						data-toggle="popover" 
+						data-html="true"
+						data-content="{{content.explainer_usercentric|escape}}">
+						<span>Gebruikergericht</span> <i class="bi bi-info-circle"></i>
+					</a>
 				</div>
 				<div class="col-12 col-md-8">
 					<div class="grad">
@@ -123,7 +158,26 @@
 						</div>
 				</div>
 			</div>
+			<div class="row">
+				<div class="caption col-12 col-md-2">
+					
+				</div>
+				<div class="col-12 col-md-8">
+					<div class="explainer">
+						<a href="/toelichting" tabindex="10" class="btn btn-sm" type="button" data-toggle="collapse" data-target="#collapseExplainer" aria-expanded="false" aria-controls="collapseExplainer">
+						    Hoe komt deze score tot stand?
+						</a>
+								
+						<div class="collapse" id="collapseExplainer">
+							<div class="card card-body">
+								{{content.explainer_organisation_score}}
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
 		</div>
+		
 
     	</div>
 
@@ -137,14 +191,45 @@
        	<div class="col-12 col-md-10">
         	<p class="">In het onderzoek zijn de volgende tools getoetst aan de 5 publieke waarden van PublicPaces:</p>
         	<div id="toolboard">
-        	<div class="row no-gutters clients-wrap clearfix wow fadeInUp" style="visibility: visible; animation-name: fadeInUp;">
+        	<div class="table-responsive">
+        		<table class="table">
+				  <thead>
+				    <tr>
+				      <th scope="col" width="100"></th>
+				      <th scope="col" class="left">Tool</th>
+				      <th scope="col" ><span class="vertical">Totaal</span></th>
+				      <th scope="col" ><span class="vertical">Open</span></th>
+				      <th scope="col" ><span class="vertical">Transparant</span></th>
+				      <th scope="col" ><span class="vertical">Aansprakelijk</span></th>
+				      <th scope="col" ><span class="vertical">Souverein</span></th>
+				      <th scope="col" ><span class="vertical">Gebruikergericht</span></th>
+				    </tr>
+				  </thead>
+				  <tbody>
+				    
+				    
+				
+
 	            {% for tool in tools %}
-	            <div class="col-lg-3 col-md-4 col-xs-6">
+	            <tr>
+				      <td ><a href="/tool/{{tool.name}}"><img width="100" src="{{tool.logo}}"  alt="Logo van {{tool.name}}"></a></td>
+				      <td><a href="/tool/{{tool.name}}">{{tool.name}}</a></td>
+				      <td class="score">{{tool.score}}</td>
+				      <td class="score">{{tool.score_open}}</td>
+				      <td class="score">{{tool.score_transparent}}</td>
+				      <td class="score">{{tool.score_accountable}}</td>
+				      <td class="score">{{tool.score_souvereign}}</td>
+				      <td class="score">{{tool.score_accountable}}</td>
+				      
+				    </tr>
+	            <!-- <div class="col-lg-3 col-md-4 col-xs-6">
 	                <div class="client-logo"><a href="/tool/{{tool.name}}"><img src="{{tool.logo}}" class="img-fluid" alt=""></a></div>
 	                <div class="tool-name">{{tool.name}}</div>
 
-	            </div>
+	            </div> -->
 	            {% endfor %}
+	              </tbody>
+				</table>
 	        </div>
     	</div>
     	
@@ -194,6 +279,4 @@
        
     </div>
 </section>
-
-
 
