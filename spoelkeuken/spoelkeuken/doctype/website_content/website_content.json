@@ -24,6 +24,7 @@
   "homepage_participants_body",
   "no_result",
   "explainer_organisation_score",
+  "explainer_organisation_link",
   "explainer_open",
   "explainer_transparent",
   "explainer_accountable",
@@ -128,29 +129,34 @@
   },
   {
    "fieldname": "explainer_transparent",
-   "fieldtype": "Text",
+   "fieldtype": "Text Editor",
    "label": "Score Transparent Explainer"
   },
   {
    "fieldname": "explainer_accountable",
-   "fieldtype": "Text",
+   "fieldtype": "Text Editor",
    "label": "Score Accountable Explainer"
   },
   {
    "fieldname": "explainer_souvereign",
-   "fieldtype": "Text",
+   "fieldtype": "Text Editor",
    "label": "Score Souvereign Explainer"
   },
   {
    "fieldname": "explainer_usercentric",
-   "fieldtype": "Text",
+   "fieldtype": "Text Editor",
    "label": "Score User-centric Explainer"
+  },
+  {
+   "fieldname": "explainer_organisation_link",
+   "fieldtype": "Data",
+   "label": "Score Organisation Link"
   }
  ],
  "index_web_pages_for_search": 1,
  "issingle": 1,
  "links": [],
- "modified": "2022-02-03 13:07:22.022184",
+ "modified": "2022-02-03 13:55:07.795914",
  "modified_by": "Administrator",
  "module": "Spoelkeuken",
  "name": "Website Content",
