@@ -6,5 +6,4 @@ from frappe.model.document import Document
 
 class Category(Document):
 	def on_change(self):
-
-        frappe.website.render.clear_cache()
+		frappe.website.render.clear_cache()
