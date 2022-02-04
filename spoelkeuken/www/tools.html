@@ -33,17 +33,20 @@
 		            
 	        	</div>
 	        	<div class="col-10">
+	        		<div class="float-right"> <i class="bi bi-card-checklist"></i> {{tool.scan_count}} </div>
 				    <h5 class="card-title"><a href="/tool/{{tool.name}}">{{tool.name}}</a></h5>
+
 				    <p class="card-text">{%if tool.description %}{{tool.description|striptags|truncate(300, True)}}{% endif %}</p>
 				    <div class="scores row">
 				    	
-				    	<div class="score"><div alt="Score: {{tool.score}}" class="bullit color-{{tool.score_class}}"></div><div class="bullit-caption">Totaal  </div></div>
+				    	{#<div class="score"><div alt="Score: {{tool.score}}" class="bullit color-{{tool.score_class}}"></div><div class="bullit-caption">Totaal  </div></div>#}
 				    	<div class="score"><div alt="Score: {{tool.score_open}}" class="bullit color-{{tool.score_open_class}}"></div><div class="bullit-caption">Open  </div></div>
 				    	<div class="score"><div alt="Score: {{tool.score_transparent}}" class="bullit color-{{tool.score_transparent_class}}"></div><div class="bullit-caption">Transparant  </div></div>
 				    
 				    	<div class="score"><div alt="Score: {{tool.score_accountable}}" class="bullit color-{{tool.score_accountable_class}}"></div><div class="bullit-caption">Aansprakelijk  </div></div>
 				    	<div class="score"><div alt="Score: {{tool.score_souvereign}}" class="bullit color-{{tool.score_souvereign_class}}"></div><div class="bullit-caption">Souverein  </div></div>
 				    	<div class="score"><div alt="Score: {{tool.score_usercentric}}" class="bullit color-{{tool.score_usercentric_class}}"></div><div class="bullit-caption">Gebruikergericht  </div>
+
 				    </div>
 				    </div>
 			    </div>

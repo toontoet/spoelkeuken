@@ -197,12 +197,13 @@
 				    <tr>
 				      <th scope="col" width="100"></th>
 				      <th scope="col" class="left">Tool</th>
-				      <th scope="col" ><span class="vertical">Totaal</span></th>
+				      
 				      <th scope="col" ><span class="vertical">Open</span></th>
 				      <th scope="col" ><span class="vertical">Transparant</span></th>
 				      <th scope="col" ><span class="vertical">Aansprakelijk</span></th>
 				      <th scope="col" ><span class="vertical">Souverein</span></th>
 				      <th scope="col" ><span class="vertical">Gebruikergericht</span></th>
+				      <th scope="col" ><span class="vertical">Totaal</span></th>
 				    </tr>
 				  </thead>
 				  <tbody>
@@ -210,12 +211,13 @@
 	                <tr>
 				      <td ><a href="/tool/{{tool.name}}"><img class="rowlogo"  src="{{tool.logo}}"  alt="Logo van {{tool.name}}"></a></td>
 				      <td><a href="/tool/{{tool.name}}">{{tool.name}}</a></td>
-				      <td class="score"><span role="img" alt="Score: {{tool.score}}" class="bullit color-{{tool.score_class}}"></span></td>
+				      
 				      <td class="score"><span role="img" alt="Score: {{tool.score_open}}" class="bullit color-{{tool.score_open_class}}"></span></td>
 				      <td class="score"><span role="img" alt="Score: {{tool.score_transparent}}" class="bullit color-{{tool.score_transparent_class}}"></span></td>
 				      <td class="score"><span role="img" alt="Score: {{tool.score_accountable}}" class="bullit color-{{tool.score_accountable_class}}"></span></td>
 				      <td class="score"><span role="img" alt="Score: {{tool.score_souvereign}}" class="bullit color-{{tool.score_souvereign_class}}"></span></td>
 				      <td class="score"><span role="img" alt="Score: {{tool.score_accountable}}" class="bullit color-{{tool.score_accountable_class}}"></span></td>
+				      <td class="score"><span role="img" alt="Score: {{tool.score}}" class="bullit color-{{tool.score_class}}"></span></td>
 				    </tr>
 	            	{% endfor %}
 	              </tbody>

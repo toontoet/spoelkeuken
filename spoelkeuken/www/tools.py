@@ -20,11 +20,23 @@ def get_context(context):
 		values = {'category': frappe.form_dict.category}
 		tools = frappe.db.sql("""
 		    SELECT
-		        t.*
+		        t.*,
+		        COUNT(*) as scan_count
 		    FROM `tabToolCategory` tc
 		        LEFT JOIN `tabTool` t
 		        ON tc.parent = t.name
-		    WHERE  t.status = 'Active' AND tc.category = %(category)s
+		        LEFT JOIN `tabScanTool` st
+		        ON st.tool = t.name
+		        LEFT JOIN `tabScans` s
+		        ON st.parent = s.name
+		        LEFT JOIN `tabOrganisation` o
+		        ON s.organisation = o.name
+		    WHERE 
+		    	o.status = 'Active' AND
+		    	s.status = 'Active' AND 
+		    	t.status = 'Active' AND 
+		    	tc.category = %(category)s
+		    GROUP BY t.name
 		    ORDER BY t.score DESC
 		""", values=values, as_dict=1)
 
@@ -34,20 +46,43 @@ def get_context(context):
 
 		context.category = False
 
-		tools = frappe.db.get_all('Tool',
-		    filters={
-		      'status': 'Active'
-		    },
-		    fields= ["name","url","logo","description", "score","score_open","score_transparent","score_accountable","score_souvereign","score_usercentric"],
-		    start=0, order_by='score desc'
-		)
+		tools = frappe.db.sql("""
+		    SELECT
+		        t.*,
+		        COUNT(*) as scan_count
+		    FROM `tabTool` t
+		        LEFT JOIN `tabScanTool` st
+		        ON st.tool = t.name
+		        LEFT JOIN `tabScans` s
+		        ON st.parent = s.name
+		        LEFT JOIN `tabOrganisation` o
+		        ON s.organisation = o.name
+		    WHERE 
+		    	o.status = 'Active' AND
+		    	s.status = 'Active' AND 
+		    	t.status = 'Active' 
+		    GROUP BY t.name
+		    ORDER BY t.score DESC
+		""",  as_dict=1)
 
 	context.tools = map(display_scores, tools)
 
 	categories = frappe.db.sql("""
 	    SELECT
-	        tc.category, COUNT(*) as count
+	        tc.category, COUNT(DISTINCT(t.name)) as count
 	    FROM `tabToolCategory` tc
+		    LEFT JOIN `tabTool` t
+	        ON tc.parent = t.name
+	        LEFT JOIN `tabScanTool` st
+	        ON st.tool = t.name
+	        LEFT JOIN `tabScans` s
+	        ON st.parent = s.name
+	        LEFT JOIN `tabOrganisation` o
+	        ON s.organisation = o.name
+	    WHERE 
+		    	o.status = 'Active' AND
+		    	s.status = 'Active' AND 
+		    	t.status = 'Active'
 	    GROUP BY tc.category
 	    ORDER by tc.name DESC
 	""",  as_dict=1)
