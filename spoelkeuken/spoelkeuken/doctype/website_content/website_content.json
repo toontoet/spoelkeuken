@@ -18,6 +18,8 @@
   "homepage_step_2_body",
   "homepage_step_3_title",
   "homepage_step_3_body",
+  "homepage_step_4_title",
+  "homepage_step_4_body",
   "homepage_tools_title",
   "homepage_tools_body",
   "homepage_stories_title",
@@ -187,12 +189,22 @@
    "fieldname": "homepage_lead_link",
    "fieldtype": "Data",
    "label": "Homepage Lead Button Link"
+  },
+  {
+   "fieldname": "homepage_step_4_title",
+   "fieldtype": "Data",
+   "label": "Homepage Intro Step 4 Title"
+  },
+  {
+   "fieldname": "homepage_step_4_body",
+   "fieldtype": "Text Editor",
+   "label": "Homepage Intro Step 4 Body"
   }
  ],
  "index_web_pages_for_search": 1,
  "issingle": 1,
  "links": [],
- "modified": "2022-02-10 16:43:55.822378",
+ "modified": "2022-02-10 17:10:16.073576",
  "modified_by": "Administrator",
  "module": "Spoelkeuken",
  "name": "Website Content",
