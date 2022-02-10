@@ -79,14 +79,14 @@
   {
    "hidden": 0,
    "is_query_report": 0,
-   "label": "Organisation Industies",
+   "label": "Organisation Industries",
    "link_to": "Industry",
    "link_type": "DocType",
    "onboard": 0,
    "type": "Link"
   }
  ],
- "modified": "2022-02-03 15:37:55.536543",
+ "modified": "2022-02-10 17:17:18.410028",
  "modified_by": "Administrator",
  "module": "Spoelkeuken",
  "name": "Spoelkeuken",
