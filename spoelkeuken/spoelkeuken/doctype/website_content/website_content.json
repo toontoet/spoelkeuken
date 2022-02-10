@@ -8,6 +8,8 @@
  "field_order": [
   "homepage_lead_title",
   "homepage_lead_body",
+  "homepage_lead_button",
+  "homepage_lead_link",
   "homepage_intro_title",
   "homepage_intro_body",
   "homepage_step_1_title",
@@ -175,12 +177,22 @@
    "fieldname": "tools_intro",
    "fieldtype": "Text Editor",
    "label": "Tools Intro"
+  },
+  {
+   "fieldname": "homepage_lead_button",
+   "fieldtype": "Data",
+   "label": "Homepage Lead Button Text"
+  },
+  {
+   "fieldname": "homepage_lead_link",
+   "fieldtype": "Data",
+   "label": "Homepage Lead Button Link"
   }
  ],
  "index_web_pages_for_search": 1,
  "issingle": 1,
  "links": [],
- "modified": "2022-02-03 20:07:55.025220",
+ "modified": "2022-02-10 16:43:55.822378",
  "modified_by": "Administrator",
  "module": "Spoelkeuken",
  "name": "Website Content",

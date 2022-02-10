@@ -9,7 +9,9 @@
 	  	<div class="body">
         {{content.homepage_lead_body}}
         </div>
-        <button type="button" class="btn btn-primary">Lees meer ...</button>
+        {% if content.homepage_lead_button %}
+        <a href="{{content.homepage_lead_link|escape}}" class="btn btn-primary">{{content.homepage_lead_button}}</a>
+        {% endif %}
       </div>
     </div>
   </div>
