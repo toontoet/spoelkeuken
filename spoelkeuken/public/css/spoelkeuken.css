@@ -9,11 +9,12 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  padding-bottom: 60px;
 }
 .masthead .body {
 	margin-bottom: 20px;
-}
 
+}
 .title {
 	margin-bottom: 0;
 }
@@ -87,7 +88,7 @@
  }
 
  #clients .client-logo {
-     padding: 64px;
+     padding: 18%;
      display: -webkit-box;
      display: -webkit-flex;
      display: -ms-flexbox;
