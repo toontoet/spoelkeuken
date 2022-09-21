@@ -9,6 +9,7 @@
  "field_order": [
   "url",
   "logo",
+  "country",
   "industries",
   "description",
   "plan",
@@ -109,12 +110,19 @@
    "fieldtype": "Table MultiSelect",
    "label": "Industries",
    "options": "OrganisationIndustry"
+  },
+  {
+   "default": "Netherlands",
+   "fieldname": "country",
+   "fieldtype": "Link",
+   "label": "Country",
+   "options": "Country"
   }
  ],
  "image_field": "logo",
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2022-02-03 15:36:35.268723",
+ "modified": "2022-09-21 14:05:34.383068",
  "modified_by": "Administrator",
  "module": "Spoelkeuken",
  "name": "Organisation",
