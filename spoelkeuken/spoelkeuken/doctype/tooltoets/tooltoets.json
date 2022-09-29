@@ -135,7 +135,7 @@
   {
    "fieldname": "q_transparent_1",
    "fieldtype": "Select",
-   "label": "Opereert het software-ecosysteem onafhankelijk van enige overheid, commerci\u00eble of bepaalde politieke invloed?",
+   "label": "Kan de gebruiker zien welke gegevens er worden opgeslagen?",
    "options": "n/a\nyes\nno"
   },
   {
