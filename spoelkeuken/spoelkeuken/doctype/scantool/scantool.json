@@ -118,7 +118,7 @@
   {
    "fieldname": "q_transparent_1",
    "fieldtype": "Select",
-   "label": "4: Opereert het software-ecosysteem onafhankelijk van enige overheid, commerci\u00eble of bepaalde politieke invloed?",
+   "label": "4: Kan de gebruiker zien welke gegevens er worden opgeslagen?",
    "options": "n/a\nyes\nno"
   },
   {
@@ -419,7 +419,7 @@
  "is_submittable": 1,
  "istable": 1,
  "links": [],
- "modified": "2021-12-20 15:01:59.142239",
+ "modified": "2022-09-29 11:22:19.986868",
  "modified_by": "Administrator",
  "module": "Spoelkeuken",
  "name": "ScanTool",

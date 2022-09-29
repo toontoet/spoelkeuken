@@ -94,8 +94,8 @@ fixtures = [
 # Permissions evaluated in scripted ways
 
 permission_query_conditions = {
-	"Scans": "spoelkeuken.permissions.scan_query",
-	"ToolToets": "spoelkeuken.permissions.toets_query",
+	"Scans": "spoelkeuken.permissions.scan_query"
+	#"ToolToets": "spoelkeuken.permissions.toets_query",
 }
 #
 # has_permission = {
@@ -103,8 +103,8 @@ permission_query_conditions = {
 # }
 
 has_permission = {
-    "Scans": "spoelkeuken.permissions.scan_has_permission",
-    "ToolToets": "spoelkeuken.permissions.toets_has_permission"
+    "Scans": "spoelkeuken.permissions.scan_has_permission"
+    #"ToolToets": "spoelkeuken.permissions.toets_has_permission"
 }
 
 # DocType Class
